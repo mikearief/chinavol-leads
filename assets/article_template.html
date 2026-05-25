@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{TITLE}} — ChinaVol</title>
+  <meta name="description" content="{{DESCRIPTION}}">
+  <meta property="og:title" content="{{TITLE}}">
+  <meta property="og:description" content="{{DESCRIPTION}}">
+  <meta property="og:url" content="https://chinavol.com/briefings/{{SLUG}}">
+  <meta property="og:type" content="article">
+  <meta property="og:image" content="https://chinavol.com/assets/og-default.png">
+  <meta property="article:published_time" content="{{DATE}}">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@chinavol1">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background: #0f172a; color: #e2e8f0;
+      min-height: 100vh; padding: 2rem 1rem;
+    }
+    .container { max-width: 720px; margin: 0 auto; }
+    .logo { font-size: 1.4rem; font-weight: 800; letter-spacing: -0.02em; margin-bottom: 2rem; }
+    .logo a { color: #f59e0b; text-decoration: none; }
+    article { line-height: 1.7; }
+    article h1 { font-size: 2.2rem; color: #f8fafc; margin-bottom: 0.5rem; line-height: 1.2; letter-spacing: -0.02em; }
+    article .meta { color: #64748b; font-size: 0.9rem; margin-bottom: 2rem; padding-bottom: 1.5rem; border-bottom: 1px solid #334155; }
+    article h2 { font-size: 1.4rem; color: #f59e0b; margin-top: 2.5rem; margin-bottom: 1rem; }
+    article h3 { font-size: 1.1rem; color: #cbd5e1; margin-top: 1.75rem; margin-bottom: 0.75rem; }
+    article p { margin-bottom: 1.2rem; color: #cbd5e1; }
+    article ul { margin-left: 1.5rem; margin-bottom: 1.2rem; }
+    article ul li { margin-bottom: 0.5rem; color: #cbd5e1; }
+    article strong { color: #f59e0b; }
+    article a { color: #f59e0b; text-decoration: none; }
+    article a:hover { text-decoration: underline; }
+    .footer { margin-top: 4rem; padding-top: 2rem; border-top: 1px solid #334155; color: #64748b; font-size: 0.85rem; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="logo"><a href="/">← ChinaVol</a></div>
+    <article>
+      <h1>{{TITLE}}</h1>
+      <div class="meta">{{DATE}} · ChinaVol Market Intelligence</div>
+
+      <h2>Context</h2>
+      <p>{{CONTEXT}}</p>
+
+      <h2>What Happened</h2>
+      <p>{{WHAT_HAPPENED}}</p>
+
+      <h2>Why It Matters</h2>
+      <p>{{WHY_IT_MATTERS}}</p>
+
+      <h2>Second-Order Effects</h2>
+      <p>{{SECOND_ORDER}}</p>
+
+      <h2>The Trade</h2>
+      <p>{{THE_TRADE}}</p>
+
+      <h2>Risk Check</h2>
+      <p>{{RISK_CHECK}}</p>
+    </article>
+    <div class="footer">
+      ChinaVol — Volatility Intelligence · Not investment advice.
+    </div>
+  </div>
+</body>
+</html>

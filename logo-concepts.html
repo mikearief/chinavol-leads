@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ChinaVol Logo Concepts</title>
+    <style>
+        body { background: #0f172a; color: #e2e8f0; font-family: system-ui; padding: 2rem; display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; }
+        .card { background: #1e293b; border: 1px solid #334155; border-radius: 16px; padding: 1.5rem; display: flex; flex-direction: column; align-items: center; }
+        .card h3 { margin-bottom: 1rem; font-size: 0.9rem; color: #f59e0b; text-transform: uppercase; letter-spacing: 0.05em; }
+        .preview { width: 240px; height: 240px; border-radius: 50%; overflow: hidden; margin-bottom: 1rem; }
+        .notes { font-size: 0.8rem; color: #94a3b8; line-height: 1.5; }
+        .notes code { background: #0f172a; padding: 0.1rem 0.3rem; border-radius: 3px; color: #f59e0b; }
+    </style>
+</head>
+<body>
+
+<div class="card">
+    <h3>Concept A: Dragon Wick</h3>
+    <div class="preview">
+        <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+                <linearGradient id="bodyGrad" x1="0%" y1="100%" x2="0%" y2="0%">
+                    <stop offset="0%" stop-color="#dc2626" />
+                    <stop offset="100%" stop-color="#ef4444" />
+                </linearGradient>
+                <linearGradient id="wickGrad" x1="0%" y1="100%" x2="100%" y2="0%">
+                    <stop offset="0%" stop-color="#f59e0b" />
+                    <stop offset="100%" stop-color="#fbbf24" />
+                </linearGradient>
+                <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stop-color="#0f172a" />
+                    <stop offset="100%" stop-color="#1e293b" />
+                </linearGradient>
+            </defs>
+            <circle cx="100" cy="100" r="96" fill="url(#bgGrad)" />
+
+            <!-- Candlestick body -->
+            <rect x="84" y="110" width="32" height="60" rx="3" fill="url(#bodyGrad)" />
+
+            <!-- Wick that becomes dragon -->
+            <path d="M100 110 L100 50 
+                     Q100 30 110 25 
+                     Q120 20 125 30 
+                     Q130 40 120 45
+                     Q115 48 118 52
+                     Q122 55 128 52
+                     Q135 46 140 50
+                     Q145 55 138 60
+                     Q132 63 128 58
+                     Q125 55 120 58
+                     Q115 62 112 70
+                     Q110 78 108 85
+                     Q106 92 105 98
+                     L105 110" 
+                  fill="none" stroke="url(#wickGrad)" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" />
+
+            <!-- Dragon eye -->
+            <circle cx="118" cy="28" r="2.5" fill="#0f172a" />
+
+            <!-- Scale texture accents -->
+            <circle cx="115" cy="40" r="3" fill="none" stroke="#f59e0b" stroke-width="1" opacity="0.4" />
+            <circle cx="128" cy="55" r="2.5" fill="none" stroke="#f59e0b" stroke-width="1" opacity="0.4" />
+            <circle cx="138" cy="52" r="2" fill="none" stroke="#f59e0b" stroke-width="1" opacity="0.4" />
+
+            <!-- Base accent ring -->
+            <circle cx="100" cy="100" r="92" fill="none" stroke="#f59e0b" stroke-width="1" opacity="0.3" />
+        </svg>
+    </div>
+    <div class="notes">
+        Candlestick body in red. Wick curls into stylized dragon head. Gold accent ring. Works at favicon size.
+    </div>
+</div>
+
+<div class="card">
+    <h3>Concept B: Volatility Compass</h3>
+    <div class="preview">
+        <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+                <linearGradient id="bg2" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stop-color="#0f172a" />
+                    <stop offset="100%" stop-color="#1e293b" />
+                </linearGradient>
+                <linearGradient id="cone" x1="0%" y1="0%" x2="0%" y2="100%">
+                    <stop offset="0%" stop-color="#f59e0b" stop-opacity="0.9" />
+                    <stop offset="100%" stop-color="#ef4444" stop-opacity="0.2" />
+                </linearGradient>
+            </defs>
+            <circle cx="100" cy="100" r="96" fill="url(#bg2)" />
+
+            <!-- Volatility cone / compass shape -->
+            <path d="M100 20 L180 150 L100 120 L20 150 Z" fill="url(#cone)" />
+
+            <!-- N/S/E/W markers as candle wicks -->
+            <line x1="100" y1="40" x2="100" y2="20" stroke="#f59e0b" stroke-width="3" />
+            <line x1="100" y1="160" x2="100" y2="180" stroke="#f59e0b" stroke-width="3" />
+            <line x1="40" y1="100" x2="20" y2="100" stroke="#f59e0b" stroke-width="3" />
+            <line x1="160" y1="100" x2="180" y2="100" stroke="#f59e0b" stroke-width="3" />
+
+            <!-- Center candle -->
+            <rect x="94" y="70" width="12" height="50" rx="2" fill="#ef4444" />
+
+            <!-- Thin ring -->
+            <circle cx="100" cy="100" r="92" fill="none" stroke="#f59e0b" stroke-width="1" opacity="0.2" />
+        </svg>
+    </div>
+    <div class="notes">
+        Volatility cone pointing north — uncertainty = direction. Compass candle wicks at cardinal points. Abstract, analytical.
+    </div>
+</div>
+
+<div class="card">
+    <h3>Concept C: CV Monogram</h3>
+    <div class="preview">
+        <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+                <linearGradient id="bg3" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stop-color="#0f172a" />
+                    <stop offset="100%" stop-color="#1e293b" />
+                </linearGradient>
+            </defs>
+            <circle cx="100" cy="100" r="96" fill="url(#bg3)" />
+
+            <!-- C made of candlesticks -->
+            <path d="M60 100 Q60 50 90 50" fill="none" stroke="#ef4444" stroke-width="14" stroke-linecap="round" />
+            <path d="M60 100 Q60 150 90 150" fill="none" stroke="#ef4444" stroke-width="14" stroke-linecap="round" />
+            <path d="M90 50 L90 150" fill="none" stroke="#ef4444" stroke-width="8" stroke-linecap="round" opacity="0" />
+            <!-- V as volatility cone -->
+            <path d="M100 160 L130 60 L160 160" fill="none" stroke="#f59e0b" stroke-width="10" stroke-linecap="round" stroke-linejoin="round" />
+
+            <!-- Inner V highlight -->
+            <path d="M130 60 L145 120" fill="none" stroke="#fbbf24" stroke-width="3" stroke-linecap="round" opacity="0.6" />
+
+            <!-- Accent dot -->
+            <circle cx="130" cy="55" r="4" fill="#f59e0b" />
+
+            <!-- Ring -->
+            <circle cx="100" cy="100" r="92" fill="none" stroke="#ef4444" stroke-width="1" opacity="0.3" />
+        </svg>
+    </div>
+    <div class="notes">
+        C as ascending candlesticks. V as a volatility cone. Gold V inside red C. Bold, monogram reads instantly. Streetwear feel.
+    </div>
+</div>
+
+</body>
+</html>

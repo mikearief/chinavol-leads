@@ -1,0 +1,22 @@
+services:
+  chinavol-leads:
+    build: .
+    restart: unless-stopped
+    env_file:
+      - ./.env
+    volumes:
+      - /mnt/c/OneDrive/Hermes/trading_journal.db:/data/trading_journal.db
+    labels:
+      - traefik.enable=true
+      - traefik.constraint-label-stack=appwrite
+      - traefik.docker.network=gateway
+      - traefik.http.routers.pm-chinavol.rule=Host(`pm.chinavol.com`)
+      - traefik.http.routers.pm-chinavol.entrypoints=appwrite_websecure
+      - traefik.http.routers.pm-chinavol.tls=true
+      - traefik.http.services.pm-chinavol.loadbalancer.server.port=8000
+    networks:
+      - gateway
+
+networks:
+  gateway:
+    external: true

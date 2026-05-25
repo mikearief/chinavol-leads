@@ -1,0 +1,48 @@
+{% extends 'leads/base.html' %}
+{% block title %}Signals — ChinaVol Pro{% endblock %}
+
+{% block content %}
+<div class="page-header">
+  <h1>Signal History</h1>
+  <p class="subtitle">All generated signals and outcomes</p>
+</div>
+
+<div class="signals-table-wrapper">
+  <table class="signals-table">
+    <thead>
+      <tr>
+        <th>Time</th>
+        <th>Ticker</th>
+        <th>Direction</th>
+        <th>PM Move</th>
+        <th>Confidence</th>
+        <th>Status</th>
+        <th>15m</th>
+        <th>1h</th>
+        <th>4h</th>
+        <th>24h</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for s in signals %}
+      <tr>
+        <td>{{ s.signal_ts }}</td>
+        <td>{{ s.monitor_id }}</td>
+        <td>{{ s.direction }}</td>
+        <td>{{ "%.2f"|format(s.pm_move_pp) }} pp</td>
+        <td>{{ s.confidence }}</td>
+        <td>{{ s.status }}</td>
+        <td>{{ "%.1f"|format(s.outcome_at_15m) if s.outcome_at_15m is not none else '—' }}</td>
+        <td>{{ "%.1f"|format(s.outcome_at_1h) if s.outcome_at_1h is not none else '—' }}</td>
+        <td>{{ "%.1f"|format(s.outcome_at_4h) if s.outcome_at_4h is not none else '—' }}</td>
+        <td>{{ "%.1f"|format(s.outcome_at_24h) if s.outcome_at_24h is not none else '—' }}</td>
+      </tr>
+      {% else %}
+      <tr>
+        <td colspan="10" class="empty-cell">No signals yet.</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+{% endblock %}

@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ChinaVol — China Market Intelligence</title>
+  <meta name="description" content="Pre-market briefings, real-time data, and signal-driven intelligence on China equities, FX, commodities, and global macro.">
+  <meta property="og:title" content="ChinaVol — China Market Intelligence">
+  <meta property="og:description" content="Pre-market briefings, real-time data, and signal-driven intelligence on China equities, FX, commodities, and global macro.">
+  <meta property="og:url" content="https://chinavol.com/">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://chinavol.com/assets/og-default.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@chinavol1">
+  <meta name="twitter:title" content="ChinaVol — China Market Intelligence">
+  <meta name="twitter:description" content="Pre-market briefings, real-time data, and signal-driven intelligence on China equities, FX, commodities, and global macro.">
+  <meta name="twitter:image" content="https://chinavol.com/assets/og-default.png">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Noto Sans SC", sans-serif;
+      background: #0f172a;
+      color: #e2e8f0;
+      min-height: 100vh;
+      line-height: 1.6;
+    }
+    a { color: inherit; text-decoration: none; }
+
+    header {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem 1rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .logo { display: flex; align-items: center; gap: .5rem; font-size: 1.6rem; font-weight: 800; letter-spacing: -0.02em;
+      background: linear-gradient(135deg, #f59e0b 0%, #ef4444 50%, #8b5cf6 100%);
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+    .logo img { width: 32px; height: 32px; border-radius: 6px; }
+    nav a { color: #94a3b8; margin-left: 1.5rem; font-size: 0.92rem; transition: color .15s; }
+    nav a:hover { color: #f8fafc; }
+
+    .hero {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 4rem 1.5rem 3rem;
+      text-align: left;
+    }
+    .hero h1 { font-size: 3rem; font-weight: 800; line-height: 1.15; margin-bottom: 1rem;
+      background: linear-gradient(90deg, #f8fafc, #f59e0b); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+    .hero p.lead { color: #94a3b8; font-size: 1.15rem; max-width: 640px; margin-bottom: 2rem; }
+    .hero-actions { display: flex; gap: .75rem; flex-wrap: wrap; }
+    .btn { display: inline-flex; align-items: center; gap: .4rem; padding: .7rem 1.25rem;
+      border-radius: 8px; font-weight: 600; font-size: .95rem; transition: transform .15s, box-shadow .15s; }
+    .btn-primary { background: linear-gradient(135deg, #f59e0b, #ef4444); color: #fff; }
+    .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 25px rgba(245,158,11,.3); }
+    .btn-ghost { border: 1px solid #334155; color: #cbd5e1; }
+    .btn-ghost:hover { border-color: #64748b; color: #f8fafc; }
+
+    .latest {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem 4rem;
+    }
+    .section-title { font-size: .82rem; text-transform: uppercase; color: #64748b; letter-spacing: .08em; margin-bottom: 1.25rem; }
+
+    /* briefing cards */
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1rem; }
+    .card {
+      background: #1e293b; border: 1px solid #334155; border-radius: 12px;
+      padding: 1.25rem; display: flex; flex-direction: column; transition: border-color .15s, transform .15s;
+    }
+    .card:hover { border-color: #64748b; transform: translateY(-2px); }
+    .card .meta { display: flex; justify-content: space-between; align-items: center; margin-bottom: .5rem; }
+    .card .tag { font-size: .72rem; text-transform: uppercase; font-weight: 700; padding: .2rem .5rem; border-radius: 4px; background: #0f172a; color: #94a3b8; }
+    .card .tag.featured { background: rgba(245,158,11,.15); color: #f59e0b; }
+    .card time { font-size: .75rem; color: #64748b; }
+    .card h3 { font-size: 1.05rem; font-weight: 700; margin-bottom: .5rem; line-height: 1.35; }
+    .card p { font-size: .88rem; color: #94a3b8; flex-grow: 1; margin-bottom: 1rem; }
+    .card .footer { display: flex; justify-content: space-between; align-items: center; font-size: .82rem; }
+    .card .footer a { color: #38bdf8; font-weight: 600; }
+    .card .footer a:hover { text-decoration: underline; }
+
+    .alert-bar {
+      max-width: 1100px; margin: 0 auto 3rem; padding: 0 1.5rem;
+    }
+    .alert-bar .box {
+      background: linear-gradient(90deg, rgba(245,158,11,.12), rgba(239,68,68,.12));
+      border: 1px solid rgba(245,158,11,.25); border-radius: 10px;
+      padding: 1rem 1.25rem; display: flex; align-items: center; gap: .75rem; font-size: .9rem;
+    }
+    .alert-bar .box span { font-size: 1.1rem; }
+
+    footer {
+      max-width: 1100px; margin: 0 auto; padding: 2rem 1.5rem 3rem;
+      border-top: 1px solid #1e293b; color: #64748b; font-size: .82rem;
+      display: flex; justify-content: space-between; flex-wrap: wrap; gap: 1rem;
+    }
+    footer a { color: #94a3b8; }
+  </style>
+</head>
+<body>
+
+  <header>
+    <a href="/" class="logo"><img src="/assets/logo_icon_raw.png" alt="">ChinaVol</a>
+  <nav>
+    <a href="/">Home</a>
+    <a href="/briefings.html">Briefings</a>
+    <a href="/methodology.html">Methodology</a>
+    <a href="https://x.com/chinavol1" target="_blank">Alerts</a>
+    <a href="/subscribe.html">Subscribe</a>
+  </nav>
+  </header>
+
+  <section class="hero">
+    <h1>China markets decoded. Before the open.</h1>
+    <p class="lead">Pre-market briefings, real-time data, and signal-driven intelligence on China equities, FX, commodities, and global macro.</p>
+    <p style="color:#f59e0b; font-size:.85rem; text-transform:uppercase; letter-spacing:.15em; margin-bottom:2rem;">Volatility Intelligence</p>
+    <div class="hero-actions">
+      <a class="btn btn-primary" href="/briefings.html">Read latest briefing →</a>
+      <a class="btn btn-ghost" href="https://x.com/chinavol1" target="_blank">Follow on 𝕏</a>
+    </div>
+  </section>
+
+  <div class="alert-bar">
+    <div class="box">
+      <span>🚨</span>
+      <div><strong>Live:</strong> Trump–Xi summit confirmed in Beijing · Polymarket SPY up 69% · KOSPI +2.63% on Korea trade deal</div>
+    </div>
+  </div>
+
+  <section class="latest">
+    <div class="section-title">Latest Briefings</div>
+    <div class="grid">
+      <article class="card">
+        <div class="meta">
+          <span class="tag featured">Featured</span>
+          <time>May 13, 2026</time>
+        </div>
+        <h3>Trump–Xi Summit: What It Means for China Markets</h3>
+        <p>Tariff truce, rare earths leverage, AI chip restrictions, Iran oil flows, and PBOC rate-cut signals — five angles to trade.</p>
+        <div class="footer">
+          <a href="/briefings/trump-xi-may-13-2026.html">Read briefing →</a>
+          <span>6 min</span>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="meta">
+          <span class="tag">Pre-market</span>
+          <time>May 14, 2026</time>
+        </div>
+        <h3>Asia Opens: KOSPI Leads on US–Korea Trade Deal</h3>
+        <p>Korea KOSPI jumps 2.63%, Hang Seng tests 16-wk highs, CSI 300 +1.06%. WTI holds above $64. Full data inside.</p>
+        <div class="footer">
+          <a href="#">Read briefing →</a>
+          <span>3 min</span>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="meta">
+          <span class="tag">Video</span>
+          <time>May 14, 2026</time>
+        </div>
+        <h3>30-Second Market Briefing</h3>
+        <p>Animated recap: KOSPI, CSI 300, Hang Seng, Nikkei, and the Trump–Xi macro callout. Watch the vertical video.</p>
+        <div class="footer">
+          <a href="#">Watch →</a>
+          <span>0:30</span>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <footer>
+    <div>© 2026 ChinaVol. Data-driven market intelligence.</div>
+    <div>
+      <a href="/subscribe.html">Subscribe</a> ·
+      <a href="https://x.com/chinavol1" target="_blank">𝕏</a> ·
+      <a href="mailto:contact@chinavol.com">Contact</a>
+    </div>
+  </footer>
+
+</body>
+</html>

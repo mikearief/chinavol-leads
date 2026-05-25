@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0"
+  xmlns:atom="http://www.w3.org/2005/Atom"
+  xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>ChinaVol</title>
+    <link>https://chinavol.com/</link>
+    <description>Pre-market briefings, real-time data, and signal-driven intelligence on China equities, FX, commodities, and global macro.</description>
+    <language>en</language>
+    <lastBuildDate>Tue, 13 May 2026 18:00:00 +0800</lastBuildDate>
+    <atom:link href="https://chinavol.com/feed.xml" rel="self" type="application/rss+xml" />
+    <image>
+      <url>https://chinavol.com/assets/logo.png</url>
+      <title>ChinaVol</title>
+      <link>https://chinavol.com/</link>
+    </image>
+
+    <!-- Template item — copy this for each new briefing -->
+    <item>
+      <title>Trump–Xi Beijing Summit: What It Means for China Markets</title>
+      <link>https://chinavol.com/briefings/trump-xi-may-13-2026.html</link>
+      <guid isPermaLink="true">https://chinavol.com/briefings/trump-xi-may-13-2026.html</guid>
+      <pubDate>Tue, 13 May 2026 18:00:00 +0800</pubDate>
+      <category>Asia Close Briefing</category>
+      <category>China</category>
+      <category>Trade War</category>
+      <category>Tariffs</category>
+      <category>Rare Earths</category>
+      <category>AI Chips</category>
+      <description>Five things to watch: tariff truce, rare earths leverage, AI chip restrictions, Iran oil flows, and PBOC rate-cut signals.</description>
+      <content:encoded>
+        <![CDATA[
+          <p>Five things to watch: tariff truce, rare earths leverage, AI chip restrictions, Iran oil flows, and PBOC rate-cut signals.</p>
+          <p>Read the full briefing: <a href="https://chinavol.com/briefings/trump-xi-may-13-2026.html">Trump–Xi Beijing Summit: What It Means for China Markets</a></p>
+        ]]>
+      </content:encoded>
+    </item>
+
+  </channel>
+</rss>

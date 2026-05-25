@@ -1,0 +1,71 @@
+{% extends 'leads/base.html' %}
+{% block title %}{{ monitor.ticker }} — Monitor Detail{% endblock %}
+
+{% block content %}
+<div class="page-header">
+  <h1>{{ monitor.ticker }}</h1>
+  <p class="subtitle">{{ monitor.pm_question or monitor.slug }}</p>
+  <a href="{{ url_for('leads.pages.dashboard') }}">← Back to Dashboard</a>
+</div>
+
+<div class="detail-grid">
+  <div class="detail-panel">
+    <h2>Polymarket Probability</h2>
+    <p class="placeholder">No PM history available yet.</p>
+  </div>
+  <div class="detail-panel">
+    <h2>Equity Price</h2>
+    <p class="placeholder">No equity bars cached yet.</p>
+  </div>
+</div>
+
+<div class="detail-panel">
+  <h2>Lead / Lag</h2>
+  {% if latest_ll %}
+  <div class="stat-row">
+    <div class="stat">
+      <span class="stat-label">Best lag</span>
+      <span class="stat-value">{{ latest_ll.best_lag }} bars ({{ ((latest_ll.best_lag * 15) | abs) }}min)</span>
+    </div>
+    <div class="stat">
+      <span class="stat-label">Correlation r</span>
+      <span class="stat-value">{{ "%.3f"|format(latest_ll.best_r) }}</span>
+    </div>
+    <div class="stat">
+      <span class="stat-label">p-value</span>
+      <span class="stat-value">{{ "%.4f"|format(latest_ll.best_p) }}</span>
+    </div>
+    <div class="stat">
+      <span class="stat-label">Observations</span>
+      <span class="stat-value">{{ latest_ll.n_obs }}</span>
+    </div>
+  </div>
+  {% else %}
+  <p class="placeholder">No lead/lag data yet — running first computation.</p>
+  {% endif %}
+</div>
+
+<div class="detail-panel">
+  <h2>Signals</h2>
+  {% if signals %}
+  <table class="signals-table">
+    <thead>
+      <tr><th>Time</th><th>Dir</th><th>PM Move</th><th>Confidence</th><th>Status</th></tr>
+    </thead>
+    <tbody>
+      {% for s in signals %}
+      <tr>
+        <td>{{ s.signal_ts[:16] if s.signal_ts else '—' }}</td>
+        <td>{{ s.direction }}</td>
+        <td>{{ "%.1f"|format(s.pm_move_pp) }}pp</td>
+        <td>{{ s.confidence }}</td>
+        <td>{{ s.status }}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+  {% else %}
+  <p class="placeholder">No signals generated yet.</p>
+  {% endif %}
+</div>
+{% endblock %}

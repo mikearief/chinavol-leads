@@ -1,0 +1,31 @@
+<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+        <linearGradient id="bodyGrad" x1="0%" y1="100%" x2="0%" y2="0%">
+            <stop offset="0%" stop-color="#dc2626" />
+            <stop offset="100%" stop-color="#ef4444" />
+        </linearGradient>
+        <linearGradient id="wickGrad" x1="0%" y1="100%" x2="100%" y2="0%">
+            <stop offset="0%" stop-color="#f59e0b" />
+            <stop offset="100%" stop-color="#fbbf24" />
+        </linearGradient>
+        <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#0f172a" />
+            <stop offset="100%" stop-color="#1e293b" />
+        </linearGradient>
+    </defs>
+
+    <circle cx="100" cy="100" r="96" fill="url(#bgGrad)" />
+
+    <rect x="84" y="110" width="32" height="60" rx="3" fill="url(#bodyGrad)" />
+
+    <path d="M100 110 L100 50 Q100 30 110 25 Q120 20 125 30 Q130 40 120 45 Q115 48 118 52 Q122 55 128 52 Q135 46 140 50 Q145 55 138 60 Q132 63 128 58 Q125 55 120 58 Q115 62 112 70 Q110 78 108 85 Q106 92 105 98 L105 110" 
+          fill="none" stroke="url(#wickGrad)" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" />
+
+    <circle cx="118" cy="28" r="2.5" fill="#0f172a" />
+
+    <circle cx="115" cy="40" r="3" fill="none" stroke="#f59e0b" stroke-width="1" opacity="0.4" />
+    <circle cx="128" cy="55" r="2.5" fill="none" stroke="#f59e0b" stroke-width="1" opacity="0.4" />
+    <circle cx="138" cy="52" r="2" fill="none" stroke="#f59e0b" stroke-width="1" opacity="0.4" />
+
+    <circle cx="100" cy="100" r="92" fill="none" stroke="#f59e0b" stroke-width="1" opacity="0.3" />
+</svg>

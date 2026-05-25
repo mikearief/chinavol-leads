@@ -1,0 +1,44 @@
+{% extends 'leads/base.html' %}
+{% block title %}Dashboard — ChinaVol Pro{% endblock %}
+
+{% block content %}
+<div class="page-header">
+  <h1>PM Market Monitor</h1>
+  <p class="subtitle">Polymarket → Equity lead/lag signals</p>
+</div>
+
+<div class="monitors-grid">
+  {% for m in monitors %}
+  <div class="monitor-card">
+    <div class="card-header">
+      <h3 class="ticker">{{ m.ticker }}</h3>
+      <span class="badge {% if m.active %}badge-active{% else %}badge-inactive{% endif %}">
+        {{ 'Active' if m.active else 'Inactive' }}
+      </span>
+    </div>
+    <div class="card-body">
+      <p class="pm-question">{{ m.pm_question or m.slug }}</p>
+      <div class="stat-row">
+        <div class="stat">
+          <span class="stat-label">Threshold</span>
+          <span class="stat-value">{{ m.signal_thresh_pp }} pp</span>
+        </div>
+        <div class="stat">
+          <span class="stat-label">Cooldown</span>
+          <span class="stat-value">{{ m.cooldown_hrs }} hrs</span>
+        </div>
+      </div>
+      <p class="description">{{ m.description or '' }}</p>
+      <p class="lead-lag-placeholder">No lead/lag data yet — running first computation</p>
+    </div>
+    <div class="card-footer">
+      <a class="btn btn-sm" href="{{ url_for('leads.pages.monitor_detail', monitor_id=m.id) }}">Details</a>
+    </div>
+  </div>
+  {% else %}
+  <div class="empty-state">
+    <p>No monitors configured.</p>
+  </div>
+  {% endfor %}
+</div>
+{% endblock %}

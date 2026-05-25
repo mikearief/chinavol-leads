@@ -1,0 +1,10 @@
+{% extends 'leads/base.html' %}
+{% block title %}Pending Approval — ChinaVol{% endblock %}
+
+{% block content %}
+<div class="auth-box" style="text-align:center;">
+  <h1 style="color:#f0ad4e;">⏳ Access Pending</h1>
+  <p>Your request is waiting for Mike's approval. You'll be able to login once approved.</p>
+  <a href="{{ url_for('leads.auth.login') }}">Back to login</a>
+</div>
+{% endblock %}
