@@ -1,0 +1,72 @@
+{
+  "updated_at": "2026-06-26T13:00:00+08:00",
+  "display_updated": "Updated Jun 26, 2026 13:00 CST",
+  "sample_notice": "Sample data for design review",
+  "regime": {
+    "label": "Watch",
+    "score": 62,
+    "trend": "+8 pts since Asia close",
+    "explanation": "Volatility is subdued, but macro catalysts are clustered around Fed policy, oil, tariffs, and China ADR breadth."
+  },
+  "hero": {
+    "headline": "China ADRs crack as Fed, oil, and tariff risk tighten the tape",
+    "dek": "A quiet index surface is hiding a sharper repricing in China-exposed risk.",
+    "url": "/briefings/daily/china-adrs-crack-as-fed-oil-and-tariff-risk-tighten-the-tape.html",
+    "date": "2026-06-26"
+  },
+  "signals": {
+    "fired_now": 0,
+    "last_fired": "2h 15m ago",
+    "watches_online": 35,
+    "themes": [
+      { "name": "China ADRs", "state": "Stress", "heat": 82 },
+      { "name": "CNH", "state": "Watch", "heat": 59 },
+      { "name": "Oil beta", "state": "Cooling", "heat": 38 },
+      { "name": "Policy", "state": "Quiet", "heat": 24 }
+    ]
+  },
+  "options": {
+    "title": "Options skew spike",
+    "z_score": 3.1,
+    "label": "Jun 26 +3.1 sigma",
+    "series": [0.4, 0.6, 0.2, 0.9, 1.1, 0.8, 1.4, 1.0, 1.7, 1.2, 2.0, 3.1]
+  },
+  "polymarket": {
+    "title": "Prediction market shock",
+    "move": "+12 pp",
+    "window": "15 min",
+    "market": "Tariff escalation before July",
+    "bars": [18, 22, 21, 24, 27, 39]
+  },
+  "news": {
+    "headline_count": 3,
+    "window": "last curator run",
+    "top_sources": ["Wallstreetcn", "Caixin", "36Kr"]
+  },
+  "moving_now": [
+    { "label": "China ADR pressure", "value": "High", "tone": "danger", "note": "Breadth weakens while index beta stays contained." },
+    { "label": "Fed repricing", "value": "+2.1%", "tone": "warning", "note": "USD strength is becoming the macro transmission channel." },
+    { "label": "Gold correction", "value": "-25%", "tone": "warning", "note": "Real-rate sensitivity is back in the tape." },
+    { "label": "Policy news flow", "value": "3 hits", "tone": "cyan", "note": "Curated China headlines active in the latest archive." }
+  ],
+  "headlines": [
+    {
+      "section": "Daily Briefing",
+      "title": "China ADRs crack as Fed, oil, and tariff risk tighten the tape",
+      "url": "/briefings/daily/china-adrs-crack-as-fed-oil-and-tariff-risk-tighten-the-tape.html",
+      "tag": "Macro"
+    },
+    {
+      "section": "China News",
+      "title": "Waller initiates USD turning point? Wall Street takes note",
+      "url": "/news/2026-06-26.html",
+      "tag": "Policy"
+    },
+    {
+      "section": "Signals",
+      "title": "No fired signals now, but China ADR watch heat is elevated",
+      "url": "/signals.html",
+      "tag": "Watch"
+    }
+  ]
+}

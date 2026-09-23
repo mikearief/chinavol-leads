@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ChinaVol Proposal C - Volatility Lab</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #070809;
+      --panel: #101316;
+      --surface: rgba(255,255,255,0.045);
+      --border: rgba(255,255,255,0.1);
+      --text: #f7f8f8;
+      --muted: #8a929d;
+      --accent: #7877ff;
+      --gold: #f59e0b;
+      --danger: #ef4444;
+      --success: #10b981;
+      --cyan: #38bdf8;
+    }
+    * { box-sizing: border-box; }
+    body { margin: 0; min-height: 100vh; background: var(--bg); color: var(--text); font-family: Inter, system-ui, sans-serif; }
+    a { color: inherit; text-decoration: none; }
+    .shell { width: min(1240px, calc(100vw - 40px)); margin: 0 auto; }
+    header {
+      height: 70px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid var(--border);
+    }
+    .brand { font-size: 1.05rem; font-weight: 900; }
+    nav { display: flex; gap: 22px; color: #b8bec7; font-size: 0.92rem; }
+    .right-meta { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; justify-content: flex-end; }
+    .stamp, .sample, .label {
+      font: 700 0.72rem "JetBrains Mono", monospace;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+    }
+    .stamp { color: #cbd5e1; }
+    .sample { color: #fbbf24; border: 1px solid rgba(245,158,11,0.38); border-radius: 999px; padding: 7px 10px; background: rgba(245,158,11,0.08); }
+    .hero {
+      min-height: calc(100vh - 70px);
+      padding: 34px 0 54px;
+      display: grid;
+      grid-template-rows: auto 1fr;
+      gap: 22px;
+    }
+    .top {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 320px;
+      gap: 18px;
+      align-items: stretch;
+    }
+    .title-block {
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 22px;
+    }
+    .kicker { color: var(--cyan); margin-bottom: 12px; }
+    h1 {
+      margin: 0;
+      font-size: clamp(3rem, 7vw, 7.4rem);
+      line-height: 0.86;
+      letter-spacing: 0;
+    }
+    .subhead { color: #b9c0ca; max-width: 720px; line-height: 1.58; font-size: 1.08rem; margin: 20px 0 0; }
+    .title-actions { margin-top: 20px; }
+    .regime-card {
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      background: var(--panel);
+      padding: 18px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      min-height: 230px;
+    }
+    .score { font-size: 4.6rem; font-weight: 900; line-height: 0.88; margin-top: 18px; }
+    .watch { color: var(--gold); font: 800 0.8rem "JetBrains Mono", monospace; text-transform: uppercase; border: 1px solid rgba(245,158,11,0.42); width: fit-content; border-radius: 999px; padding: 7px 10px; background: rgba(245,158,11,0.08); }
+    .grid {
+      display: grid;
+      grid-template-columns: 1.3fr 0.9fr 0.9fr;
+      grid-template-rows: 1fr 0.82fr;
+      gap: 14px;
+      min-height: 570px;
+    }
+    .panel {
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      background: rgba(255,255,255,0.035);
+      padding: 18px;
+      overflow: hidden;
+    }
+    .panel.large { grid-row: span 2; }
+    .panel-head { display: flex; justify-content: space-between; align-items: start; gap: 12px; margin-bottom: 16px; }
+    .label { color: var(--muted); }
+    .metric { font-size: 1.55rem; font-weight: 900; margin-top: 7px; }
+    .badge { color: #fecaca; border: 1px solid rgba(239,68,68,0.36); background: rgba(239,68,68,0.1); border-radius: 999px; padding: 7px 9px; font: 800 0.72rem "JetBrains Mono", monospace; white-space: nowrap; }
+    svg { display: block; width: 100%; height: auto; }
+    .bars { display: grid; gap: 12px; margin-top: 10px; }
+    .bar-line { display: grid; grid-template-columns: 92px 1fr 54px; gap: 10px; align-items: center; color: #cbd5e1; font-size: 0.86rem; }
+    .track { height: 8px; background: rgba(255,255,255,0.08); border-radius: 999px; overflow: hidden; }
+    .track i { display: block; height: 100%; border-radius: inherit; background: var(--accent); }
+    .heatmap { display: grid; grid-template-columns: repeat(7, 1fr); gap: 7px; margin-top: 14px; }
+    .cell { aspect-ratio: 1; border-radius: 5px; border: 1px solid rgba(255,255,255,0.07); background: rgba(255,255,255,0.06); }
+    .h1 { background: rgba(16,185,129,0.18); }
+    .h2 { background: rgba(56,189,248,0.24); }
+    .h3 { background: rgba(245,158,11,0.35); }
+    .h4 { background: rgba(239,68,68,0.48); }
+    .brief h2 { font-size: 1.7rem; line-height: 1.06; margin: 16px 0 0; letter-spacing: 0; }
+    .brief p { color: #aeb6c2; line-height: 1.5; margin: 14px 0 0; }
+    .btn {
+      min-height: 44px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 8px;
+      padding: 0 16px;
+      background: #f6f7f9;
+      color: #070809;
+      font-weight: 850;
+    }
+    @media (max-width: 1020px) {
+      nav { display: none; }
+      .top, .grid { grid-template-columns: 1fr; grid-template-rows: auto; }
+      .panel.large { grid-row: auto; }
+      .grid { min-height: auto; }
+      h1 { font-size: clamp(3rem, 13vw, 5.8rem); }
+    }
+  </style>
+</head>
+<body>
+  <div class="shell">
+    <header>
+      <a class="brand" href="#">ChinaVol</a>
+      <nav>
+        <a href="#">Dashboard</a>
+        <a href="#">Volatility</a>
+        <a href="#">Prediction Markets</a>
+        <a href="#">Briefings</a>
+      </nav>
+      <div class="right-meta">
+        <span class="stamp">Updated Jun 26, 2026 13:00 CST</span>
+        <span class="sample">Sample data</span>
+      </div>
+    </header>
+
+    <main class="hero">
+      <section class="top">
+        <div class="title-block">
+          <div class="label kicker">Volatility lab</div>
+          <h1>ChinaVol Dashboard</h1>
+          <p class="subhead">A chart-first surface for option skew, prediction-market shocks, and signal watch heat across China-exposed assets.</p>
+          <div class="title-actions">
+            <a class="btn" href="#">Open today's dashboard</a>
+          </div>
+        </div>
+        <aside class="regime-card">
+          <div>
+            <div class="label">ChinaVol regime</div>
+            <div class="score">62</div>
+          </div>
+          <div>
+            <div class="watch">Watch / +8 pts</div>
+            <p style="color:#aeb6c2;line-height:1.44;margin:14px 0 0">Catalysts are clustered before realized volatility confirms.</p>
+          </div>
+        </aside>
+      </section>
+
+      <section class="grid">
+        <article class="panel large">
+          <div class="panel-head">
+            <div>
+              <div class="label">Options skew z-score</div>
+              <div class="metric">Jun 26 right-edge spike</div>
+            </div>
+            <span class="badge">+3.1 sigma</span>
+          </div>
+          <svg viewBox="0 0 610 390" role="img" aria-label="Options skew z-score chart">
+            <line x1="36" y1="314" x2="594" y2="314" stroke="rgba(255,255,255,.12)" />
+            <line x1="36" y1="234" x2="594" y2="234" stroke="rgba(255,255,255,.07)" />
+            <line x1="36" y1="154" x2="594" y2="154" stroke="rgba(255,255,255,.07)" />
+            <line x1="36" y1="74" x2="594" y2="74" stroke="rgba(255,255,255,.07)" />
+            <line x1="526" y1="38" x2="526" y2="338" stroke="#ef4444" stroke-width="3" />
+            <path d="M42 283 C92 268, 110 286, 154 246 S226 260, 258 224 S334 210, 370 180 S435 188, 470 128 S535 58, 586 62" fill="none" stroke="#38bdf8" stroke-width="5" />
+            <path d="M42 283 C92 268, 110 286, 154 246 S226 260, 258 224 S334 210, 370 180 S435 188, 470 128 S535 58, 586 62 L586 342 L42 342 Z" fill="rgba(56,189,248,.08)" />
+            <circle cx="586" cy="62" r="8" fill="#ef4444" />
+            <text x="510" y="372" fill="#8a929d" font-family="JetBrains Mono" font-size="13">Jun 26</text>
+            <text x="42" y="372" fill="#8a929d" font-family="JetBrains Mono" font-size="13">Jun 20</text>
+          </svg>
+        </article>
+
+        <article class="panel">
+          <div class="panel-head">
+            <div>
+              <div class="label">Prediction market shock</div>
+              <div class="metric">+12 pp / 15m</div>
+            </div>
+          </div>
+          <div class="bars">
+            <div class="bar-line"><span>09:45</span><div class="track"><i style="width:38%"></i></div><strong>18%</strong></div>
+            <div class="bar-line"><span>10:00</span><div class="track"><i style="width:44%"></i></div><strong>22%</strong></div>
+            <div class="bar-line"><span>10:15</span><div class="track"><i style="width:42%"></i></div><strong>21%</strong></div>
+            <div class="bar-line"><span>10:30</span><div class="track"><i style="width:48%"></i></div><strong>24%</strong></div>
+            <div class="bar-line"><span>10:45</span><div class="track"><i style="width:54%;background:#f59e0b"></i></div><strong>27%</strong></div>
+            <div class="bar-line"><span>11:00</span><div class="track"><i style="width:78%;background:#ef4444"></i></div><strong>39%</strong></div>
+          </div>
+        </article>
+
+        <article class="panel">
+          <div class="panel-head">
+            <div>
+              <div class="label">Signal watch heat</div>
+              <div class="metric">35 online</div>
+            </div>
+          </div>
+          <div class="heatmap" aria-label="Signal watch heatmap">
+            <span class="cell h1"></span><span class="cell h1"></span><span class="cell h2"></span><span class="cell h1"></span><span class="cell h3"></span><span class="cell h4"></span><span class="cell h3"></span>
+            <span class="cell h1"></span><span class="cell h2"></span><span class="cell h2"></span><span class="cell h3"></span><span class="cell h4"></span><span class="cell h4"></span><span class="cell h3"></span>
+            <span class="cell h1"></span><span class="cell h1"></span><span class="cell h2"></span><span class="cell h2"></span><span class="cell h3"></span><span class="cell h2"></span><span class="cell h1"></span>
+            <span class="cell h2"></span><span class="cell h3"></span><span class="cell h4"></span><span class="cell h3"></span><span class="cell h2"></span><span class="cell h1"></span><span class="cell h1"></span>
+          </div>
+        </article>
+
+        <article class="panel brief">
+          <div class="label">Latest briefing</div>
+          <h2>China ADRs crack as Fed, oil, and tariff risk tighten the tape</h2>
+          <p>A compact editorial panel keeps the dashboard tied to the daily narrative.</p>
+        </article>
+
+        <article class="panel">
+          <div class="panel-head">
+            <div>
+              <div class="label">News wire</div>
+              <div class="metric">3 headlines</div>
+            </div>
+          </div>
+          <svg viewBox="0 0 300 170" role="img" aria-label="News wire count chart">
+            <rect x="18" y="100" width="44" height="48" rx="5" fill="rgba(56,189,248,.55)" />
+            <rect x="82" y="74" width="44" height="74" rx="5" fill="rgba(16,185,129,.55)" />
+            <rect x="146" y="42" width="44" height="106" rx="5" fill="rgba(245,158,11,.72)" />
+            <rect x="210" y="118" width="44" height="30" rx="5" fill="rgba(120,119,255,.62)" />
+            <line x1="10" y1="148" x2="286" y2="148" stroke="rgba(255,255,255,.16)" />
+            <text x="138" y="166" fill="#8a929d" font-family="JetBrains Mono" font-size="11">Jun 26</text>
+          </svg>
+        </article>
+      </section>
+    </main>
+  </div>
+</body>
+</html>

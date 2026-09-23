@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ChinaVol Volatility Lab</title>
+  <meta name="description" content="ChinaVol chart lab for option skew, prediction-market shocks, signal watch heat, and China market volatility.">
+  <meta property="og:title" content="ChinaVol Volatility Lab">
+  <meta property="og:description" content="Option skew, prediction-market shocks, signal watch heat, and China market volatility.">
+  <meta property="og:url" content="https://chinavol.com/volatility.html">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://chinavol.com/assets/og-default.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@chinavol1">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/chinavol-suite.css">
+  <style>
+    .lab-hero {
+      min-height: calc(100vh - 74px);
+      padding: 34px 0 54px;
+      display: grid;
+      grid-template-rows: auto 1fr;
+      gap: 22px;
+    }
+
+    .lab-top {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 320px;
+      gap: 18px;
+      align-items: stretch;
+    }
+
+    .title-block {
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 22px;
+    }
+
+    .regime-card {
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      background: var(--panel);
+      padding: 18px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      min-height: 230px;
+    }
+
+    .big-score { font-size: 4.6rem; font-weight: 900; line-height: 0.88; margin-top: 18px; }
+    .lab-grid {
+      display: grid;
+      grid-template-columns: 1.3fr 0.9fr 0.9fr;
+      grid-template-rows: 1fr 0.82fr;
+      gap: 14px;
+      min-height: 570px;
+    }
+
+    .lab-panel {
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      background: rgba(255,255,255,0.035);
+      padding: 18px;
+      overflow: hidden;
+    }
+
+    .lab-panel.large { grid-row: span 2; }
+    .metric { font-size: 1.55rem; font-weight: 900; margin-top: 7px; }
+    .bars { display: grid; gap: 12px; margin-top: 10px; }
+    .bar-line { display: grid; grid-template-columns: 92px 1fr 54px; gap: 10px; align-items: center; color: #cbd5e1; font-size: 0.86rem; }
+    .track { height: 8px; background: rgba(255,255,255,0.08); border-radius: 999px; overflow: hidden; }
+    .track i { display: block; height: 100%; border-radius: inherit; background: var(--violet); }
+    .heatmap { display: grid; grid-template-columns: repeat(7, 1fr); gap: 7px; margin-top: 14px; }
+    .cell { aspect-ratio: 1; border-radius: 5px; border: 1px solid rgba(255,255,255,0.07); background: rgba(255,255,255,0.06); }
+    .h1 { background: rgba(16,185,129,0.18); }
+    .h2 { background: rgba(56,189,248,0.24); }
+    .h3 { background: rgba(245,158,11,0.35); }
+    .h4 { background: rgba(239,68,68,0.48); }
+    .brief h2 { font-size: 1.7rem; line-height: 1.06; margin: 16px 0 0; letter-spacing: 0; }
+    .brief p { color: #aeb6c2; line-height: 1.5; margin: 14px 0 0; }
+
+    @media (max-width: 1020px) {
+      .lab-top, .lab-grid { grid-template-columns: 1fr; grid-template-rows: auto; }
+      .lab-panel.large { grid-row: auto; }
+      .lab-grid { min-height: auto; }
+    }
+  </style>
+</head>
+<body>
+  <div class="shell">
+    <header class="site-header">
+      <a class="brand" href="/" aria-label="ChinaVol home">
+        <img src="/assets/logo_icon_raw.png" alt="">
+        <span>ChinaVol</span>
+      </a>
+      <nav class="primary-nav" aria-label="Primary">
+        <a href="/">Today</a>
+        <a href="/newsroom.html">Newsroom</a>
+        <a class="active" href="/volatility.html">Volatility</a>
+        <a href="/briefings.html">Briefings</a>
+        <a href="/subscribe.html">Subscribe</a>
+      </nav>
+      <div class="stamp" data-field="display_updated">Updated Jun 27, 2026 17:29 CST</div>
+    </header>
+
+    <main class="lab-hero">
+      <section class="lab-top">
+        <div class="title-block">
+          <div class="label kicker">Volatility lab</div>
+          <h1>ChinaVol Dashboard</h1>
+          <p class="lead">A chart-first surface for option skew, prediction-market shocks, and signal watch heat across China-exposed assets.</p>
+          <div class="actions">
+            <a class="btn btn-primary" href="/briefings.html" data-link="briefing">Open today's dashboard</a>
+            <span class="sample" data-field="data_quality">Mixed data</span>
+          </div>
+        </div>
+        <aside class="regime-card">
+          <div>
+            <div class="label">ChinaVol regime</div>
+            <div class="big-score" data-field="regime_score">62</div>
+          </div>
+          <div>
+            <div class="pill"><span data-field="regime_label">Watch</span> / <span data-field="regime_trend">+8 pts</span></div>
+            <p class="copy" data-field="regime_explanation">Catalysts are clustered before realized volatility confirms.</p>
+          </div>
+        </aside>
+      </section>
+
+      <section class="lab-grid">
+        <article class="lab-panel large">
+          <div class="chart-top">
+            <div>
+              <div class="label">Options skew z-score</div>
+              <div class="metric" data-field="option_label">Jun 26 right-edge spike</div>
+            </div>
+            <span class="badge" data-field="option_z">+3.1 sigma</span>
+          </div>
+          <svg viewBox="0 0 610 390" role="img" aria-label="Options skew z-score chart">
+            <line x1="36" y1="314" x2="594" y2="314" stroke="rgba(255,255,255,.12)" />
+            <line x1="36" y1="234" x2="594" y2="234" stroke="rgba(255,255,255,.07)" />
+            <line x1="36" y1="154" x2="594" y2="154" stroke="rgba(255,255,255,.07)" />
+            <line x1="36" y1="74" x2="594" y2="74" stroke="rgba(255,255,255,.07)" />
+            <line x1="526" y1="38" x2="526" y2="338" stroke="#ef4444" stroke-width="3" />
+            <path d="M42 283 C92 268, 110 286, 154 246 S226 260, 258 224 S334 210, 370 180 S435 188, 470 128 S535 58, 586 62" fill="none" stroke="#38bdf8" stroke-width="5" />
+            <path d="M42 283 C92 268, 110 286, 154 246 S226 260, 258 224 S334 210, 370 180 S435 188, 470 128 S535 58, 586 62 L586 342 L42 342 Z" fill="rgba(56,189,248,.08)" />
+            <circle cx="586" cy="62" r="8" fill="#ef4444" />
+            <text x="510" y="372" fill="#8a929d" font-family="JetBrains Mono" font-size="13">Jun 26</text>
+            <text x="42" y="372" fill="#8a929d" font-family="JetBrains Mono" font-size="13">Jun 20</text>
+          </svg>
+        </article>
+
+        <article class="lab-panel">
+          <div class="chart-top">
+            <div>
+              <div class="label">Prediction market shock</div>
+              <div class="metric">+12 pp / 15m</div>
+            </div>
+          </div>
+          <div class="bars">
+            <div class="bar-line"><span>09:45</span><div class="track"><i style="width:38%"></i></div><strong>18%</strong></div>
+            <div class="bar-line"><span>10:00</span><div class="track"><i style="width:44%"></i></div><strong>22%</strong></div>
+            <div class="bar-line"><span>10:15</span><div class="track"><i style="width:42%"></i></div><strong>21%</strong></div>
+            <div class="bar-line"><span>10:30</span><div class="track"><i style="width:48%"></i></div><strong>24%</strong></div>
+            <div class="bar-line"><span>10:45</span><div class="track"><i style="width:54%;background:#f59e0b"></i></div><strong>27%</strong></div>
+            <div class="bar-line"><span>11:00</span><div class="track"><i style="width:78%;background:#ef4444"></i></div><strong>39%</strong></div>
+          </div>
+        </article>
+
+        <article class="lab-panel">
+          <div class="chart-top">
+            <div>
+              <div class="label">Signal watch heat</div>
+              <div class="metric"><span data-field="watches_online">35</span> online</div>
+            </div>
+          </div>
+          <div class="heatmap" aria-label="Signal watch heatmap">
+            <span class="cell h1"></span><span class="cell h1"></span><span class="cell h2"></span><span class="cell h1"></span><span class="cell h3"></span><span class="cell h4"></span><span class="cell h3"></span>
+            <span class="cell h1"></span><span class="cell h2"></span><span class="cell h2"></span><span class="cell h3"></span><span class="cell h4"></span><span class="cell h4"></span><span class="cell h3"></span>
+            <span class="cell h1"></span><span class="cell h1"></span><span class="cell h2"></span><span class="cell h2"></span><span class="cell h3"></span><span class="cell h2"></span><span class="cell h1"></span>
+            <span class="cell h2"></span><span class="cell h3"></span><span class="cell h4"></span><span class="cell h3"></span><span class="cell h2"></span><span class="cell h1"></span><span class="cell h1"></span>
+          </div>
+        </article>
+
+        <article class="lab-panel brief">
+          <div class="label">Latest briefing</div>
+          <h2 data-field="briefing_title">China ADRs crack as Fed, oil, and tariff risk tighten the tape</h2>
+          <p>A compact editorial panel keeps the dashboard tied to the daily narrative.</p>
+          <a class="route-link" href="/briefings.html" data-link="briefing">Read briefing</a>
+        </article>
+
+        <article class="lab-panel">
+          <div class="chart-top">
+            <div>
+              <div class="label">News wire</div>
+              <div class="metric"><span data-field="headline_count">0</span> headlines</div>
+            </div>
+          </div>
+          <svg viewBox="0 0 300 170" role="img" aria-label="News wire count chart">
+            <rect x="18" y="100" width="44" height="48" rx="5" fill="rgba(56,189,248,.55)" />
+            <rect x="82" y="74" width="44" height="74" rx="5" fill="rgba(16,185,129,.55)" />
+            <rect x="146" y="42" width="44" height="106" rx="5" fill="rgba(245,158,11,.72)" />
+            <rect x="210" y="118" width="44" height="30" rx="5" fill="rgba(120,119,255,.62)" />
+            <line x1="10" y1="148" x2="286" y2="148" stroke="rgba(255,255,255,.16)" />
+            <text x="138" y="166" fill="#8a929d" font-family="JetBrains Mono" font-size="11">Jun 26</text>
+          </svg>
+        </article>
+      </section>
+    </main>
+
+    <footer class="page-footer">
+      <div>© 2026 ChinaVol.</div>
+      <div><a href="/newsroom.html">Newsroom</a> / <a href="/briefings.html">Briefings</a> / <a href="/subscribe.html">Subscribe</a></div>
+    </footer>
+  </div>
+
+  <script>
+    const fallback = {
+      display_updated: "Updated Jun 27, 2026 17:29 CST",
+      data_quality: "mixed",
+      briefing: { title: "China Market Pre-Open Briefing", url: "/briefings.html" },
+      news: { headline_count: 0 },
+      regime: { label: "Watch", score: 62, trend: "+8 pts", explanation: "Catalysts are clustered before realized volatility confirms." },
+      options: { label: "Jun 26 +3.1 sigma", z_score: 3.1 },
+      signals: { watches_online: 35 }
+    };
+
+    function setText(name, value) {
+      document.querySelectorAll(`[data-field="${name}"]`).forEach((node) => { node.textContent = value; });
+    }
+
+    function setHref(name, value) {
+      document.querySelectorAll(`[data-link="${name}"]`).forEach((node) => { node.href = value; });
+    }
+
+    function hydrate(data) {
+      setText("display_updated", data.display_updated || fallback.display_updated);
+      setText("data_quality", `${data.data_quality || fallback.data_quality} data`);
+      setText("regime_score", data.regime?.score ?? fallback.regime.score);
+      setText("regime_label", data.regime?.label || fallback.regime.label);
+      setText("regime_trend", data.regime?.trend || fallback.regime.trend);
+      setText("regime_explanation", data.regime?.explanation || fallback.regime.explanation);
+      setText("option_label", data.options?.label || fallback.options.label);
+      setText("option_z", `+${data.options?.z_score ?? fallback.options.z_score} sigma`);
+      setText("watches_online", data.signals?.watches_online ?? fallback.signals.watches_online);
+      setText("briefing_title", data.briefing?.title || fallback.briefing.title);
+      setText("headline_count", data.news?.headline_count ?? fallback.news.headline_count);
+      setHref("briefing", data.briefing?.url || fallback.briefing.url);
+    }
+
+    fetch("/site-manifest.json", { cache: "no-store" })
+      .then((response) => response.ok ? response.json() : fallback)
+      .then(hydrate)
+      .catch(() => hydrate(fallback));
+  </script>
+</body>
+</html>

@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ChinaVol Proposal A - Command Center</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #08090a;
+      --panel: #101214;
+      --panel-2: #14171a;
+      --surface: rgba(255,255,255,0.045);
+      --border: rgba(255,255,255,0.1);
+      --text: #f7f8f8;
+      --muted: #8d939d;
+      --accent: #7877ff;
+      --gold: #f59e0b;
+      --danger: #ef4444;
+      --success: #10b981;
+      --cyan: #38bdf8;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: Inter, system-ui, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+    }
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      background:
+        linear-gradient(rgba(255,255,255,0.025) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.025) 1px, transparent 1px);
+      background-size: 44px 44px;
+      mask-image: linear-gradient(to bottom, #000, transparent 82%);
+    }
+    a { color: inherit; text-decoration: none; }
+    .shell { position: relative; width: min(1180px, calc(100vw - 40px)); margin: 0 auto; }
+    header {
+      height: 72px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid var(--border);
+    }
+    .brand { display: flex; align-items: center; gap: 12px; font-weight: 900; letter-spacing: 0; }
+    .brand-mark {
+      width: 34px;
+      height: 34px;
+      border: 1px solid rgba(245,158,11,0.45);
+      border-radius: 8px;
+      display: grid;
+      place-items: center;
+      color: var(--gold);
+      font-weight: 900;
+      background: #11100b;
+    }
+    nav { display: flex; align-items: center; gap: 24px; color: #b7bcc5; font-size: 0.92rem; }
+    nav .active { color: var(--text); }
+    .timestamp {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      color: #cbd5e1;
+      font: 700 0.74rem "JetBrains Mono", monospace;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+    .dot { width: 8px; height: 8px; border-radius: 999px; background: var(--success); box-shadow: 0 0 20px var(--success); }
+    .sample {
+      display: inline-flex;
+      width: fit-content;
+      align-items: center;
+      border: 1px solid rgba(245,158,11,0.38);
+      color: #fbbf24;
+      background: rgba(245,158,11,0.08);
+      border-radius: 999px;
+      padding: 7px 10px;
+      font: 700 0.68rem "JetBrains Mono", monospace;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    .hero {
+      min-height: calc(100vh - 72px);
+      display: grid;
+      grid-template-columns: minmax(0, 0.98fr) minmax(460px, 1.02fr);
+      gap: 46px;
+      align-items: center;
+      padding: 50px 0 72px;
+    }
+    .eyebrow { color: var(--cyan); font: 700 0.78rem "JetBrains Mono", monospace; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 18px; }
+    h1 {
+      margin: 0;
+      font-size: clamp(3rem, 5.7vw, 6.6rem);
+      line-height: 0.88;
+      letter-spacing: 0;
+      max-width: 760px;
+    }
+    .lead {
+      margin: 28px 0 0;
+      color: #bec5d0;
+      font-size: clamp(1.03rem, 1.5vw, 1.24rem);
+      line-height: 1.65;
+      max-width: 610px;
+    }
+    .actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 34px; }
+    .btn {
+      min-height: 46px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 9px;
+      border-radius: 8px;
+      padding: 0 18px;
+      border: 1px solid var(--border);
+      font-weight: 800;
+      font-size: 0.94rem;
+    }
+    .btn-primary { background: #f6f7f9; color: #08090a; border-color: #f6f7f9; }
+    .btn-ghost { color: #e5e7eb; background: rgba(255,255,255,0.04); }
+    .hero-meta { display: flex; flex-wrap: wrap; align-items: center; gap: 14px; margin-top: 28px; }
+    .console {
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      background: color-mix(in srgb, var(--panel) 92%, transparent);
+      box-shadow: 0 24px 80px rgba(0,0,0,0.35);
+      overflow: hidden;
+    }
+    .console-head {
+      min-height: 56px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 18px;
+      border-bottom: 1px solid var(--border);
+      background: rgba(255,255,255,0.025);
+    }
+    .console-title { font-weight: 800; }
+    .console-code { color: var(--muted); font: 700 0.72rem "JetBrains Mono", monospace; }
+    .metric-band {
+      display: grid;
+      grid-template-columns: 0.9fr 1.1fr;
+      border-bottom: 1px solid var(--border);
+    }
+    .regime {
+      padding: 24px;
+      border-right: 1px solid var(--border);
+      min-height: 230px;
+    }
+    .label { color: var(--muted); font: 700 0.72rem "JetBrains Mono", monospace; text-transform: uppercase; letter-spacing: 0.08em; }
+    .score { display: flex; align-items: flex-end; gap: 10px; margin-top: 15px; }
+    .score strong { font-size: 5.2rem; line-height: 0.85; letter-spacing: 0; }
+    .score span { color: var(--gold); font: 700 0.78rem "JetBrains Mono", monospace; margin-bottom: 9px; }
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 30px;
+      border: 1px solid rgba(245,158,11,0.42);
+      color: var(--gold);
+      background: rgba(245,158,11,0.08);
+      border-radius: 999px;
+      padding: 0 10px;
+      font: 800 0.75rem "JetBrains Mono", monospace;
+      text-transform: uppercase;
+      margin-top: 18px;
+    }
+    .microcopy { color: #a9b0bb; line-height: 1.48; margin-top: 16px; font-size: 0.92rem; }
+    .chart-panel { padding: 24px 22px 18px; min-height: 230px; position: relative; }
+    .chart-top { display: flex; justify-content: space-between; align-items: start; gap: 16px; margin-bottom: 16px; }
+    .badge-red { color: #fecaca; background: rgba(239,68,68,0.1); border: 1px solid rgba(239,68,68,0.35); border-radius: 999px; padding: 7px 9px; font: 800 0.75rem "JetBrains Mono", monospace; }
+    svg { display: block; width: 100%; height: auto; }
+    .widget-grid { display: grid; grid-template-columns: repeat(3, 1fr); }
+    .widget {
+      min-height: 148px;
+      padding: 18px;
+      border-right: 1px solid var(--border);
+    }
+    .widget:last-child { border-right: 0; }
+    .big { font-size: 2.1rem; font-weight: 900; margin-top: 14px; letter-spacing: 0; }
+    .sub { color: #a8b0bb; font-size: 0.86rem; line-height: 1.45; margin-top: 8px; }
+    .headline-strip {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+      margin-top: 18px;
+    }
+    .story {
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      background: rgba(255,255,255,0.035);
+      padding: 16px;
+      min-height: 124px;
+    }
+    .story .section { color: var(--gold); font: 800 0.68rem "JetBrains Mono", monospace; text-transform: uppercase; }
+    .story h3 { font-size: 1rem; line-height: 1.35; margin: 12px 0 0; }
+    @media (max-width: 960px) {
+      nav { display: none; }
+      .hero { grid-template-columns: 1fr; min-height: auto; }
+      .metric-band, .widget-grid, .headline-strip { grid-template-columns: 1fr; }
+      .regime, .widget { border-right: 0; border-bottom: 1px solid var(--border); }
+      h1 { font-size: clamp(3rem, 13vw, 5.8rem); }
+    }
+  </style>
+</head>
+<body>
+  <div class="shell">
+    <header>
+      <a class="brand" href="#"><span class="brand-mark">CV</span><span>ChinaVol</span></a>
+      <nav aria-label="Primary">
+        <a class="active" href="#">Today</a>
+        <a href="#">Signals</a>
+        <a href="#">News</a>
+        <a href="#">Briefings</a>
+        <a href="#">Subscribe</a>
+      </nav>
+      <div class="timestamp"><span class="dot"></span> Updated Jun 26, 2026 13:00 CST</div>
+    </header>
+
+    <main class="hero">
+      <section>
+        <div class="eyebrow">ChinaVol command center</div>
+        <h1>China risk is quiet. The tape is not.</h1>
+        <p class="lead">Daily China market intelligence from live signals, options skew, prediction markets, and Chinese financial news.</p>
+        <div class="actions">
+          <a class="btn btn-primary" href="#">Read today's briefing</a>
+          <a class="btn btn-ghost" href="#">View live signals</a>
+        </div>
+        <div class="hero-meta">
+          <span class="sample">Sample data</span>
+          <span class="timestamp"><span class="dot"></span> 35 watches online</span>
+        </div>
+      </section>
+
+      <section class="console" aria-label="Risk console">
+        <div class="console-head">
+          <div class="console-title">Risk Console</div>
+          <div class="console-code">CNVOL / JUN 26</div>
+        </div>
+        <div class="metric-band">
+          <div class="regime">
+            <div class="label">ChinaVol regime</div>
+            <div class="score"><strong>62</strong><span>+8 pts</span></div>
+            <div class="pill">Watch</div>
+            <p class="microcopy">Volatility is subdued, but catalysts are clustered around Fed policy, oil, tariffs, and China ADR breadth.</p>
+          </div>
+          <div class="chart-panel">
+            <div class="chart-top">
+              <div>
+                <div class="label">Option skew spike</div>
+                <p class="sub">Right-edge move detected on Jun 26.</p>
+              </div>
+              <div class="badge-red">+3.1 sigma</div>
+            </div>
+            <svg viewBox="0 0 360 132" role="img" aria-label="Options skew sparkline">
+              <line x1="0" y1="102" x2="360" y2="102" stroke="rgba(255,255,255,.12)" />
+              <line x1="312" y1="10" x2="312" y2="116" stroke="#ef4444" stroke-width="2" />
+              <path d="M4 91 C32 83, 45 90, 72 78 S124 83, 148 70 S194 69, 220 58 S265 66, 286 46 S326 18, 354 20" fill="none" stroke="#38bdf8" stroke-width="3" />
+              <path d="M4 91 C32 83, 45 90, 72 78 S124 83, 148 70 S194 69, 220 58 S265 66, 286 46 S326 18, 354 20 L354 122 L4 122 Z" fill="rgba(56,189,248,.09)" />
+              <circle cx="354" cy="20" r="5" fill="#ef4444" />
+              <text x="306" y="130" fill="#8d939d" font-family="JetBrains Mono" font-size="11">Jun 26</text>
+            </svg>
+          </div>
+        </div>
+        <div class="widget-grid">
+          <div class="widget">
+            <div class="label">Polymarket shock</div>
+            <div class="big" style="color:#f59e0b">+12 pp</div>
+            <div class="sub">Tariff escalation repriced in 15 min.</div>
+          </div>
+          <div class="widget">
+            <div class="label">News wire</div>
+            <div class="big" style="color:#38bdf8">3</div>
+            <div class="sub">Curated China headlines found in latest run.</div>
+          </div>
+          <div class="widget">
+            <div class="label">Signals</div>
+            <div class="big" style="color:#10b981">0 fired</div>
+            <div class="sub">Last fired 2h 15m ago; watch heat elevated.</div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <section class="headline-strip" aria-label="Top stories">
+      <article class="story">
+        <div class="section">Daily briefing</div>
+        <h3>China ADRs crack as Fed, oil, and tariff risk tighten the tape</h3>
+      </article>
+      <article class="story">
+        <div class="section">China news</div>
+        <h3>Waller initiates USD turning point? Wall Street takes note</h3>
+      </article>
+      <article class="story">
+        <div class="section">Signals</div>
+        <h3>No fired signals now, but China ADR watch heat is elevated</h3>
+      </article>
+    </section>
+  </div>
+</body>
+</html>

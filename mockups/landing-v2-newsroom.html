@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ChinaVol Proposal B - Newsroom</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #090908;
+      --paper: #f4f0e8;
+      --ink: #f7f4ec;
+      --muted: #a69f91;
+      --panel: #121210;
+      --border: rgba(244,240,232,0.13);
+      --gold: #f59e0b;
+      --danger: #ef4444;
+      --cyan: #38bdf8;
+      --green: #10b981;
+      --violet: #7877ff;
+    }
+    * { box-sizing: border-box; }
+    body { margin: 0; background: var(--bg); color: var(--ink); font-family: Inter, system-ui, sans-serif; }
+    a { color: inherit; text-decoration: none; }
+    .page { width: min(1200px, calc(100vw - 44px)); margin: 0 auto; }
+    header {
+      height: 76px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid var(--border);
+    }
+    .brand { font-weight: 900; font-size: 1.18rem; }
+    nav { display: flex; gap: 24px; color: #c6c0b6; font-size: 0.92rem; }
+    .meta-row { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
+    .timestamp, .sample, .kicker {
+      font-family: "JetBrains Mono", monospace;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      font-size: 0.72rem;
+    }
+    .timestamp { color: #c6c0b6; }
+    .sample { color: #fbbf24; border: 1px solid rgba(245,158,11,0.38); border-radius: 999px; padding: 7px 10px; background: rgba(245,158,11,0.08); }
+    .hero {
+      min-height: calc(100vh - 76px);
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 340px;
+      gap: 34px;
+      padding: 42px 0 52px;
+      align-items: start;
+    }
+    .main-story { padding-top: 8px; }
+    .kicker { color: var(--gold); margin-bottom: 18px; }
+    h1 {
+      margin: 0;
+      font-size: clamp(3rem, 6.4vw, 6.85rem);
+      line-height: 0.9;
+      letter-spacing: 0;
+      max-width: 850px;
+    }
+    .dek {
+      max-width: 760px;
+      color: #cfc8bb;
+      line-height: 1.62;
+      font-size: clamp(1.05rem, 1.5vw, 1.25rem);
+      margin: 24px 0 0;
+    }
+    .actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 30px; }
+    .btn {
+      min-height: 44px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0 16px;
+      border-radius: 8px;
+      border: 1px solid var(--border);
+      font-weight: 800;
+      font-size: 0.93rem;
+    }
+    .btn-primary { background: var(--paper); color: #090908; border-color: var(--paper); }
+    .btn-ghost { background: rgba(244,240,232,0.045); }
+    .below-hero {
+      display: grid;
+      grid-template-columns: 0.95fr 1.05fr;
+      gap: 14px;
+      margin-top: 34px;
+    }
+    .why, .timeline, .rail-card {
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      background: rgba(244,240,232,0.045);
+    }
+    .why { padding: 18px; }
+    .section-label { color: #a69f91; font: 800 0.72rem "JetBrains Mono", monospace; text-transform: uppercase; letter-spacing: 0.07em; }
+    .why ul { padding: 0; margin: 16px 0 0; list-style: none; display: grid; gap: 12px; }
+    .why li { color: #e8e1d7; line-height: 1.46; padding-left: 18px; position: relative; }
+    .why li::before { content: ""; width: 7px; height: 7px; background: var(--gold); border-radius: 999px; position: absolute; left: 0; top: 0.55em; }
+    .timeline { padding: 18px 18px 14px; min-height: 220px; }
+    .chart-head { display: flex; align-items: start; justify-content: space-between; gap: 12px; margin-bottom: 12px; }
+    .shock { color: #fecaca; background: rgba(239,68,68,0.11); border: 1px solid rgba(239,68,68,0.36); border-radius: 999px; padding: 7px 9px; font: 800 0.72rem "JetBrains Mono", monospace; }
+    svg { display: block; width: 100%; height: auto; }
+    aside { position: sticky; top: 18px; display: grid; gap: 12px; }
+    .rail-title {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 12px;
+      margin-bottom: 2px;
+    }
+    .rail-card { padding: 16px; }
+    .move { display: flex; justify-content: space-between; gap: 12px; align-items: baseline; }
+    .move strong { font-size: 1.02rem; }
+    .move span { font: 800 0.78rem "JetBrains Mono", monospace; color: var(--gold); }
+    .rail-card p { color: #bfb8ad; line-height: 1.44; font-size: 0.88rem; margin: 9px 0 0; }
+    .bar { height: 6px; background: rgba(244,240,232,0.08); border-radius: 999px; overflow: hidden; margin-top: 12px; }
+    .bar i { display: block; height: 100%; border-radius: inherit; background: var(--danger); }
+    .bar.cyan i { background: var(--cyan); }
+    .bar.gold i { background: var(--gold); }
+    .bar.green i { background: var(--green); }
+    @media (max-width: 960px) {
+      nav { display: none; }
+      .hero, .below-hero { grid-template-columns: 1fr; }
+      aside { position: static; }
+      h1 { font-size: clamp(3rem, 13vw, 5.8rem); }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <header>
+      <a class="brand" href="#">ChinaVol</a>
+      <nav>
+        <a href="#">Today</a>
+        <a href="#">Signals</a>
+        <a href="#">News</a>
+        <a href="#">Briefings</a>
+        <a href="#">Subscribe</a>
+      </nav>
+      <div class="meta-row">
+        <span class="timestamp">Updated Jun 26, 2026 13:00 CST</span>
+        <span class="sample">Sample data</span>
+      </div>
+    </header>
+
+    <main class="hero">
+      <section class="main-story">
+        <div class="kicker">Daily briefing / China market open</div>
+        <h1>The market is pricing calm. China ADRs say otherwise.</h1>
+        <p class="dek">Fed repricing, oil's sudden unwind, and tariff risk are compressing China-exposed valuations while headline volatility still looks tame.</p>
+        <div class="actions">
+          <a class="btn btn-primary" href="#">Read today's briefing</a>
+          <a class="btn btn-ghost" href="#">Open news wire</a>
+        </div>
+        <div class="below-hero">
+          <div class="why">
+            <div class="section-label">Why it matters</div>
+            <ul>
+              <li>USD strength is becoming the transmission channel into China ADR risk.</li>
+              <li>Oil's correction flips from inflation threat to margin tailwind, but only if demand holds.</li>
+              <li>Option skew is waking up before realized volatility confirms the move.</li>
+            </ul>
+          </div>
+          <div class="timeline">
+            <div class="chart-head">
+              <div>
+                <div class="section-label">Pressure timeline</div>
+                <p style="margin:8px 0 0;color:#bfb8ad">News flow, skew, and prediction-market repricing converge at the right edge.</p>
+              </div>
+              <span class="shock">Jun 26 spike</span>
+            </div>
+            <svg viewBox="0 0 430 160" role="img" aria-label="Market pressure timeline">
+              <line x1="0" y1="126" x2="430" y2="126" stroke="rgba(244,240,232,.13)" />
+              <line x1="360" y1="14" x2="360" y2="138" stroke="#ef4444" stroke-width="2" />
+              <path d="M6 117 C40 100, 70 111, 102 94 S160 101, 198 78 S260 72, 292 66 S342 29, 424 24" fill="none" stroke="#f59e0b" stroke-width="4" />
+              <path d="M6 126 C60 124, 118 116, 176 119 S278 93, 326 88 S378 61, 424 64" fill="none" stroke="#38bdf8" stroke-width="3" opacity=".9" />
+              <text x="348" y="154" fill="#a69f91" font-family="JetBrains Mono" font-size="11">Jun 26</text>
+            </svg>
+          </div>
+        </div>
+      </section>
+
+      <aside aria-label="Moving now">
+        <div class="rail-title">
+          <div class="section-label">Moving now</div>
+          <span class="timestamp">Live tape</span>
+        </div>
+        <article class="rail-card">
+          <div class="move"><strong>China ADR pressure</strong><span>High</span></div>
+          <p>Breadth weakens while index beta stays contained.</p>
+          <div class="bar"><i style="width:82%"></i></div>
+        </article>
+        <article class="rail-card">
+          <div class="move"><strong>Fed repricing</strong><span>+2.1%</span></div>
+          <p>Dollar strength is becoming the macro transmission channel.</p>
+          <div class="bar gold"><i style="width:74%"></i></div>
+        </article>
+        <article class="rail-card">
+          <div class="move"><strong>Gold correction</strong><span>-25%</span></div>
+          <p>Real-rate sensitivity is back in the tape.</p>
+          <div class="bar cyan"><i style="width:58%"></i></div>
+        </article>
+        <article class="rail-card">
+          <div class="move"><strong>Policy news flow</strong><span>3 hits</span></div>
+          <p>Curated China headlines active in the latest archive.</p>
+          <div class="bar green"><i style="width:46%"></i></div>
+        </article>
+      </aside>
+    </main>
+  </div>
+</body>
+</html>

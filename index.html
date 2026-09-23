@@ -3,185 +3,180 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ChinaVol — China Market Intelligence</title>
-  <meta name="description" content="Pre-market briefings, real-time data, and signal-driven intelligence on China equities, FX, commodities, and global macro.">
-  <meta property="og:title" content="ChinaVol — China Market Intelligence">
-  <meta property="og:description" content="Pre-market briefings, real-time data, and signal-driven intelligence on China equities, FX, commodities, and global macro.">
+  <title>ChinaVol Today</title>
+  <meta name="description" content="ChinaVol command center for daily China market risk, options skew, signals, news, and briefings.">
+  <meta property="og:title" content="ChinaVol Today">
+  <meta property="og:description" content="Daily China market risk, options skew, signals, news, and briefings.">
   <meta property="og:url" content="https://chinavol.com/">
   <meta property="og:type" content="website">
   <meta property="og:image" content="https://chinavol.com/assets/og-default.png">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:site" content="@chinavol1">
-  <meta name="twitter:title" content="ChinaVol — China Market Intelligence">
-  <meta name="twitter:description" content="Pre-market briefings, real-time data, and signal-driven intelligence on China equities, FX, commodities, and global macro.">
-  <meta name="twitter:image" content="https://chinavol.com/assets/og-default.png">
-  <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Noto Sans SC", sans-serif;
-      background: #0f172a;
-      color: #e2e8f0;
-      min-height: 100vh;
-      line-height: 1.6;
-    }
-    a { color: inherit; text-decoration: none; }
-
-    header {
-      max-width: 1100px;
-      margin: 0 auto;
-      padding: 2rem 1.5rem 1rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-    .logo { display: flex; align-items: center; gap: .5rem; font-size: 1.6rem; font-weight: 800; letter-spacing: -0.02em;
-      background: linear-gradient(135deg, #f59e0b 0%, #ef4444 50%, #8b5cf6 100%);
-      -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-    .logo img { width: 32px; height: 32px; border-radius: 6px; }
-    nav a { color: #94a3b8; margin-left: 1.5rem; font-size: 0.92rem; transition: color .15s; }
-    nav a:hover { color: #f8fafc; }
-
-    .hero {
-      max-width: 1100px;
-      margin: 0 auto;
-      padding: 4rem 1.5rem 3rem;
-      text-align: left;
-    }
-    .hero h1 { font-size: 3rem; font-weight: 800; line-height: 1.15; margin-bottom: 1rem;
-      background: linear-gradient(90deg, #f8fafc, #f59e0b); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-    .hero p.lead { color: #94a3b8; font-size: 1.15rem; max-width: 640px; margin-bottom: 2rem; }
-    .hero-actions { display: flex; gap: .75rem; flex-wrap: wrap; }
-    .btn { display: inline-flex; align-items: center; gap: .4rem; padding: .7rem 1.25rem;
-      border-radius: 8px; font-weight: 600; font-size: .95rem; transition: transform .15s, box-shadow .15s; }
-    .btn-primary { background: linear-gradient(135deg, #f59e0b, #ef4444); color: #fff; }
-    .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 25px rgba(245,158,11,.3); }
-    .btn-ghost { border: 1px solid #334155; color: #cbd5e1; }
-    .btn-ghost:hover { border-color: #64748b; color: #f8fafc; }
-
-    .latest {
-      max-width: 1100px;
-      margin: 0 auto;
-      padding: 2rem 1.5rem 4rem;
-    }
-    .section-title { font-size: .82rem; text-transform: uppercase; color: #64748b; letter-spacing: .08em; margin-bottom: 1.25rem; }
-
-    /* briefing cards */
-    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1rem; }
-    .card {
-      background: #1e293b; border: 1px solid #334155; border-radius: 12px;
-      padding: 1.25rem; display: flex; flex-direction: column; transition: border-color .15s, transform .15s;
-    }
-    .card:hover { border-color: #64748b; transform: translateY(-2px); }
-    .card .meta { display: flex; justify-content: space-between; align-items: center; margin-bottom: .5rem; }
-    .card .tag { font-size: .72rem; text-transform: uppercase; font-weight: 700; padding: .2rem .5rem; border-radius: 4px; background: #0f172a; color: #94a3b8; }
-    .card .tag.featured { background: rgba(245,158,11,.15); color: #f59e0b; }
-    .card time { font-size: .75rem; color: #64748b; }
-    .card h3 { font-size: 1.05rem; font-weight: 700; margin-bottom: .5rem; line-height: 1.35; }
-    .card p { font-size: .88rem; color: #94a3b8; flex-grow: 1; margin-bottom: 1rem; }
-    .card .footer { display: flex; justify-content: space-between; align-items: center; font-size: .82rem; }
-    .card .footer a { color: #38bdf8; font-weight: 600; }
-    .card .footer a:hover { text-decoration: underline; }
-
-    .alert-bar {
-      max-width: 1100px; margin: 0 auto 3rem; padding: 0 1.5rem;
-    }
-    .alert-bar .box {
-      background: linear-gradient(90deg, rgba(245,158,11,.12), rgba(239,68,68,.12));
-      border: 1px solid rgba(245,158,11,.25); border-radius: 10px;
-      padding: 1rem 1.25rem; display: flex; align-items: center; gap: .75rem; font-size: .9rem;
-    }
-    .alert-bar .box span { font-size: 1.1rem; }
-
-    footer {
-      max-width: 1100px; margin: 0 auto; padding: 2rem 1.5rem 3rem;
-      border-top: 1px solid #1e293b; color: #64748b; font-size: .82rem;
-      display: flex; justify-content: space-between; flex-wrap: wrap; gap: 1rem;
-    }
-    footer a { color: #94a3b8; }
-  </style>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/chinavol-suite.css">
 </head>
 <body>
+  <div class="shell">
+    <header class="site-header">
+      <a class="brand" href="/" aria-label="ChinaVol home">
+        <img src="/assets/logo_icon_raw.png" alt="">
+        <span>ChinaVol</span>
+      </a>
+      <nav class="primary-nav" aria-label="Primary">
+        <a class="active" href="/">Today</a>
+        <a href="/newsroom.html">Newsroom</a>
+        <a href="/volatility.html">Volatility</a>
+        <a href="/briefings.html">Briefings</a>
+        <a href="/subscribe.html">Subscribe</a>
+      </nav>
+      <div class="stamp" data-field="display_updated">Updated Jun 27, 2026 17:29 CST</div>
+    </header>
 
-  <header>
-    <a href="/" class="logo"><img src="/assets/logo_icon_raw.png" alt="">ChinaVol</a>
-  <nav>
-    <a href="/">Home</a>
-    <a href="/briefings.html">Briefings</a>
-    <a href="/methodology.html">Methodology</a>
-    <a href="https://x.com/chinavol1" target="_blank">Alerts</a>
-    <a href="/subscribe.html">Subscribe</a>
-  </nav>
-  </header>
+    <main class="hero-two-col">
+      <section>
+        <div class="label kicker">Today / Command center</div>
+        <h1 data-field="hero_headline">China risk is quiet. The tape is not.</h1>
+        <p class="lead" data-field="hero_dek">Daily China market intelligence from live signals, options skew, prediction markets, and Chinese financial news.</p>
+        <div class="actions">
+          <a class="btn btn-primary" data-link="briefing" href="/briefings.html">Read today's briefing</a>
+          <a class="btn btn-ghost" href="/volatility.html">Open volatility lab</a>
+        </div>
+        <div class="actions" aria-label="Data state">
+          <span class="sample" data-field="data_quality">Mixed data</span>
+          <span class="stamp"><span data-field="watches_online">35</span> watches online</span>
+        </div>
+      </section>
 
-  <section class="hero">
-    <h1>China markets decoded. Before the open.</h1>
-    <p class="lead">Pre-market briefings, real-time data, and signal-driven intelligence on China equities, FX, commodities, and global macro.</p>
-    <p style="color:#f59e0b; font-size:.85rem; text-transform:uppercase; letter-spacing:.15em; margin-bottom:2rem;">Volatility Intelligence</p>
-    <div class="hero-actions">
-      <a class="btn btn-primary" href="/briefings.html">Read latest briefing →</a>
-      <a class="btn btn-ghost" href="https://x.com/chinavol1" target="_blank">Follow on 𝕏</a>
-    </div>
-  </section>
+      <section class="panel" aria-label="Risk console">
+        <div class="panel-head">
+          <div class="panel-title">Risk Console</div>
+          <div class="label">CNVOL / Today</div>
+        </div>
+        <div class="dashboard">
+          <div class="regime">
+            <div class="label">ChinaVol regime</div>
+            <div class="score"><strong data-field="regime_score">62</strong><span data-field="regime_trend">+8 pts</span></div>
+            <div class="pill" data-field="regime_label">Watch</div>
+            <p class="copy" data-field="regime_explanation">Volatility is subdued, but catalysts are clustered around Fed policy, oil, tariffs, and China ADR breadth.</p>
+          </div>
+          <div class="chart">
+            <div class="chart-top">
+              <div>
+                <div class="label">Option skew spike</div>
+                <p class="copy" data-field="option_label">Right-edge move detected on Jun 26.</p>
+              </div>
+              <span class="badge" data-field="option_z">+3.1 sigma</span>
+            </div>
+            <svg viewBox="0 0 390 142" role="img" aria-label="Options skew sparkline">
+              <line x1="0" y1="109" x2="390" y2="109" stroke="rgba(255,255,255,.12)" />
+              <line x1="338" y1="12" x2="338" y2="126" stroke="#ef4444" stroke-width="2" />
+              <path d="M5 98 C42 88, 58 96, 91 82 S150 89, 177 73 S234 72, 264 59 S313 67, 334 39 S363 22, 382 23" fill="none" stroke="#38bdf8" stroke-width="3" />
+              <path d="M5 98 C42 88, 58 96, 91 82 S150 89, 177 73 S234 72, 264 59 S313 67, 334 39 S363 22, 382 23 L382 130 L5 130 Z" fill="rgba(56,189,248,.09)" />
+              <circle cx="382" cy="23" r="5" fill="#ef4444" />
+              <text x="326" y="139" fill="#8d939d" font-family="JetBrains Mono" font-size="11">Jun 26</text>
+            </svg>
+          </div>
+        </div>
+        <div class="preview-grid">
+          <article class="preview">
+            <div class="label">Newsroom</div>
+            <h3 data-field="newsroom_headline">China news wire is quiet</h3>
+            <div class="mini-bars">
+              <div class="mini-bar"><i style="width:82%;background:#ef4444"></i></div>
+              <div class="mini-bar"><i style="width:64%;background:#f59e0b"></i></div>
+              <div class="mini-bar"><i style="width:46%;background:#38bdf8"></i></div>
+            </div>
+          </article>
+          <article class="preview">
+            <div class="label">Briefing</div>
+            <h3 data-field="briefing_title">China Market Pre-Open Briefing</h3>
+            <a class="route-link" data-link="briefing" href="/briefings.html">Open briefing</a>
+          </article>
+          <article class="preview">
+            <div class="label">Signals</div>
+            <h3><span data-field="signals_fired">0</span> fired now / last fired <span data-field="signals_last">2h 15m ago</span></h3>
+            <div class="mini-bars">
+              <div class="mini-bar"><i style="width:72%;background:#10b981"></i></div>
+              <div class="mini-bar"><i style="width:58%;background:#7877ff"></i></div>
+              <div class="mini-bar"><i style="width:34%;background:#f59e0b"></i></div>
+            </div>
+          </article>
+        </div>
+      </section>
+    </main>
 
-  <div class="alert-bar">
-    <div class="box">
-      <span>🚨</span>
-      <div><strong>Live:</strong> Trump–Xi summit confirmed in Beijing · Polymarket SPY up 69% · KOSPI +2.63% on Korea trade deal</div>
-    </div>
+    <section class="suite-band" aria-label="Core routes">
+      <article class="route-card">
+        <div class="label">Today</div>
+        <h2>Command Center</h2>
+        <p>Risk regime, signal state, skew spike, and the current briefing in one fast surface.</p>
+      </article>
+      <article class="route-card">
+        <div class="label">Newsroom</div>
+        <h2>Market Narrative</h2>
+        <p>The top story, why-it-matters bullets, and moving-now rail get a dedicated editorial page.</p>
+        <a class="route-link" href="/newsroom.html">Open newsroom</a>
+      </article>
+      <article class="route-card">
+        <div class="label">Volatility</div>
+        <h2>Chart Lab</h2>
+        <p>Options z-score, prediction shifts, signal heat, and market pressure charts live together.</p>
+        <a class="route-link" href="/volatility.html">Open lab</a>
+      </article>
+    </section>
+
+    <footer class="page-footer">
+      <div>© 2026 ChinaVol.</div>
+      <div><a href="/briefings.html">Briefings</a> / <a href="/subscribe.html">Subscribe</a> / <a href="https://x.com/chinavol1" target="_blank" rel="noopener">X</a></div>
+    </footer>
   </div>
 
-  <section class="latest">
-    <div class="section-title">Latest Briefings</div>
-    <div class="grid">
-      <article class="card">
-        <div class="meta">
-          <span class="tag featured">Featured</span>
-          <time>May 13, 2026</time>
-        </div>
-        <h3>Trump–Xi Summit: What It Means for China Markets</h3>
-        <p>Tariff truce, rare earths leverage, AI chip restrictions, Iran oil flows, and PBOC rate-cut signals — five angles to trade.</p>
-        <div class="footer">
-          <a href="/briefings/trump-xi-may-13-2026.html">Read briefing →</a>
-          <span>6 min</span>
-        </div>
-      </article>
+  <script>
+    const fallback = {
+      display_updated: "Updated Jun 27, 2026 17:29 CST",
+      data_quality: "mixed",
+      hero: { headline: "China risk is quiet. The tape is not.", dek: "Daily China market intelligence from live signals, options skew, prediction markets, and Chinese financial news." },
+      briefing: { title: "China Market Pre-Open Briefing", url: "/briefings.html" },
+      news: { message: "China news wire is quiet", headlines: [] },
+      regime: { label: "Watch", score: 62, trend: "+8 pts", explanation: "Volatility is subdued, but catalysts are clustered around Fed policy, oil, tariffs, and China ADR breadth." },
+      options: { label: "Jun 26 +3.1 sigma", z_score: 3.1 },
+      signals: { fired_now: 0, watches_online: 35, last_fired: "2h 15m ago" }
+    };
 
-      <article class="card">
-        <div class="meta">
-          <span class="tag">Pre-market</span>
-          <time>May 14, 2026</time>
-        </div>
-        <h3>Asia Opens: KOSPI Leads on US–Korea Trade Deal</h3>
-        <p>Korea KOSPI jumps 2.63%, Hang Seng tests 16-wk highs, CSI 300 +1.06%. WTI holds above $64. Full data inside.</p>
-        <div class="footer">
-          <a href="#">Read briefing →</a>
-          <span>3 min</span>
-        </div>
-      </article>
+    function setText(name, value) {
+      document.querySelectorAll(`[data-field="${name}"]`).forEach((node) => { node.textContent = value; });
+    }
 
-      <article class="card">
-        <div class="meta">
-          <span class="tag">Video</span>
-          <time>May 14, 2026</time>
-        </div>
-        <h3>30-Second Market Briefing</h3>
-        <p>Animated recap: KOSPI, CSI 300, Hang Seng, Nikkei, and the Trump–Xi macro callout. Watch the vertical video.</p>
-        <div class="footer">
-          <a href="#">Watch →</a>
-          <span>0:30</span>
-        </div>
-      </article>
-    </div>
-  </section>
+    function setHref(name, value) {
+      document.querySelectorAll(`[data-link="${name}"]`).forEach((node) => { node.href = value; });
+    }
 
-  <footer>
-    <div>© 2026 ChinaVol. Data-driven market intelligence.</div>
-    <div>
-      <a href="/subscribe.html">Subscribe</a> ·
-      <a href="https://x.com/chinavol1" target="_blank">𝕏</a> ·
-      <a href="mailto:contact@chinavol.com">Contact</a>
-    </div>
-  </footer>
+    function hydrate(data) {
+      const latestNews = data.news?.headlines?.[0];
+      setText("display_updated", data.display_updated || fallback.display_updated);
+      setText("data_quality", `${data.data_quality || fallback.data_quality} data`);
+      setText("hero_headline", data.hero?.headline || fallback.hero.headline);
+      setText("hero_dek", data.hero?.dek || fallback.hero.dek);
+      setText("watches_online", data.signals?.watches_online ?? fallback.signals.watches_online);
+      setText("regime_score", data.regime?.score ?? fallback.regime.score);
+      setText("regime_trend", data.regime?.trend || fallback.regime.trend);
+      setText("regime_label", data.regime?.label || fallback.regime.label);
+      setText("regime_explanation", data.regime?.explanation || fallback.regime.explanation);
+      setText("option_label", data.options?.label || fallback.options.label);
+      setText("option_z", `+${data.options?.z_score ?? fallback.options.z_score} sigma`);
+      setText("newsroom_headline", latestNews?.title || data.news?.message || fallback.news.message);
+      setText("briefing_title", data.briefing?.title || fallback.briefing.title);
+      setText("signals_fired", data.signals?.fired_now ?? fallback.signals.fired_now);
+      setText("signals_last", data.signals?.last_fired || fallback.signals.last_fired);
+      setHref("briefing", data.briefing?.url || data.hero?.primary_url || fallback.briefing.url);
+    }
 
+    fetch("/site-manifest.json", { cache: "no-store" })
+      .then((response) => response.ok ? response.json() : fallback)
+      .then(hydrate)
+      .catch(() => hydrate(fallback));
+  </script>
 </body>
 </html>

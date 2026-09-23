@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ChinaVol Newsroom</title>
+  <meta name="description" content="ChinaVol newsroom for the daily China market narrative, moving-now risk, and latest briefing context.">
+  <meta property="og:title" content="ChinaVol Newsroom">
+  <meta property="og:description" content="Daily China market narrative, moving-now risk, and latest briefing context.">
+  <meta property="og:url" content="https://chinavol.com/newsroom.html">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://chinavol.com/assets/og-default.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@chinavol1">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/chinavol-suite.css">
+  <style>
+    .news-hero {
+      min-height: calc(100vh - 74px);
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 340px;
+      gap: 34px;
+      padding: 42px 0 52px;
+      align-items: start;
+    }
+
+    .below-hero {
+      display: grid;
+      grid-template-columns: 0.95fr 1.05fr;
+      gap: 14px;
+      margin-top: 34px;
+    }
+
+    .why, .timeline, .rail-card {
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      background: rgba(244,240,232,0.045);
+    }
+
+    .why { padding: 18px; }
+    .why ul { padding: 0; margin: 16px 0 0; list-style: none; display: grid; gap: 12px; }
+    .why li { color: #e8e1d7; line-height: 1.46; padding-left: 18px; position: relative; }
+    .why li::before {
+      content: "";
+      width: 7px;
+      height: 7px;
+      background: var(--gold);
+      border-radius: 999px;
+      position: absolute;
+      left: 0;
+      top: 0.55em;
+    }
+
+    .timeline { padding: 18px 18px 14px; min-height: 220px; }
+    .chart-head { display: flex; align-items: start; justify-content: space-between; gap: 12px; margin-bottom: 12px; }
+    .shock { color: #fecaca; background: rgba(239,68,68,0.11); border: 1px solid rgba(239,68,68,0.36); border-radius: 999px; padding: 7px 9px; font: 800 0.72rem "JetBrains Mono", ui-monospace, monospace; }
+    aside { position: sticky; top: 18px; display: grid; gap: 12px; }
+    .rail-title {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 12px;
+      margin-bottom: 2px;
+    }
+
+    .rail-card { padding: 16px; }
+    .move { display: flex; justify-content: space-between; gap: 12px; align-items: baseline; }
+    .move strong { font-size: 1.02rem; }
+    .move span { font: 800 0.78rem "JetBrains Mono", ui-monospace, monospace; color: var(--gold); }
+    .rail-card p { color: #bfb8ad; line-height: 1.44; font-size: 0.88rem; margin: 9px 0 0; }
+    .bar { height: 6px; background: rgba(244,240,232,0.08); border-radius: 999px; overflow: hidden; margin-top: 12px; }
+    .bar i { display: block; height: 100%; border-radius: inherit; background: var(--danger); }
+    .bar.cyan i { background: var(--cyan); }
+    .bar.gold i { background: var(--gold); }
+    .bar.green i { background: var(--success); }
+
+    @media (max-width: 960px) {
+      .news-hero, .below-hero { grid-template-columns: 1fr; }
+      aside { position: static; }
+    }
+  </style>
+</head>
+<body class="newsroom">
+  <div class="shell">
+    <header class="site-header">
+      <a class="brand" href="/" aria-label="ChinaVol home">
+        <img src="/assets/logo_icon_raw.png" alt="">
+        <span>ChinaVol</span>
+      </a>
+      <nav class="primary-nav" aria-label="Primary">
+        <a href="/">Today</a>
+        <a class="active" href="/newsroom.html">Newsroom</a>
+        <a href="/volatility.html">Volatility</a>
+        <a href="/briefings.html">Briefings</a>
+        <a href="/subscribe.html">Subscribe</a>
+      </nav>
+      <div class="stamp" data-field="display_updated">Updated Jun 27, 2026 17:29 CST</div>
+    </header>
+
+    <main class="news-hero">
+      <section>
+        <div class="label kicker">Daily briefing / China market open</div>
+        <h1 data-field="headline">The market is pricing calm. China ADRs say otherwise.</h1>
+        <p class="lead" data-field="dek">Fed repricing, oil's sudden unwind, and tariff risk are compressing China-exposed valuations while headline volatility still looks tame.</p>
+        <div class="actions">
+          <a class="btn btn-primary" data-link="briefing" href="/briefings.html">Read today's briefing</a>
+          <a class="btn btn-ghost" data-link="news" href="/news/">Open news archive</a>
+        </div>
+
+        <div class="below-hero">
+          <div class="why">
+            <div class="label">Why it matters</div>
+            <ul>
+              <li data-field="why_one">USD strength is becoming the transmission channel into China ADR risk.</li>
+              <li data-field="why_two">Oil's correction flips from inflation threat to margin tailwind, but only if demand holds.</li>
+              <li data-field="why_three">Option skew is waking up before realized volatility confirms the move.</li>
+            </ul>
+          </div>
+          <div class="timeline">
+            <div class="chart-head">
+              <div>
+                <div class="label">Pressure timeline</div>
+                <p class="copy" data-field="timeline_copy">News flow, skew, and prediction-market repricing converge at the right edge.</p>
+              </div>
+              <span class="shock" data-field="shock_label">Jun 26 spike</span>
+            </div>
+            <svg viewBox="0 0 430 160" role="img" aria-label="Market pressure timeline">
+              <line x1="0" y1="126" x2="430" y2="126" stroke="rgba(244,240,232,.13)" />
+              <line x1="360" y1="14" x2="360" y2="138" stroke="#ef4444" stroke-width="2" />
+              <path d="M6 117 C40 100, 70 111, 102 94 S160 101, 198 78 S260 72, 292 66 S342 29, 424 24" fill="none" stroke="#f59e0b" stroke-width="4" />
+              <path d="M6 126 C60 124, 118 116, 176 119 S278 93, 326 88 S378 61, 424 64" fill="none" stroke="#38bdf8" stroke-width="3" opacity=".9" />
+              <text x="348" y="154" fill="#a69f91" font-family="JetBrains Mono" font-size="11">Jun 26</text>
+            </svg>
+          </div>
+        </div>
+      </section>
+
+      <aside aria-label="Moving now">
+        <div class="rail-title">
+          <div class="label">Moving now</div>
+          <span class="stamp" data-field="news_status">Quiet</span>
+        </div>
+        <article class="rail-card">
+          <div class="move"><strong data-field="rail_one_title">Latest briefing</strong><span data-field="rail_one_value">Live</span></div>
+          <p data-field="rail_one_copy">China ADRs crack as Fed, oil, and tariff risk tighten the tape.</p>
+          <div class="bar"><i style="width:82%"></i></div>
+        </article>
+        <article class="rail-card">
+          <div class="move"><strong>Fed repricing</strong><span>+2.1%</span></div>
+          <p>Dollar strength is becoming the macro transmission channel.</p>
+          <div class="bar gold"><i style="width:74%"></i></div>
+        </article>
+        <article class="rail-card">
+          <div class="move"><strong>Option skew</strong><span data-field="option_label">+3.1σ</span></div>
+          <p>Skew is moving before realized volatility confirms.</p>
+          <div class="bar cyan"><i style="width:58%"></i></div>
+        </article>
+        <article class="rail-card">
+          <div class="move"><strong>Policy news flow</strong><span data-field="headline_count">0 hits</span></div>
+          <p data-field="news_message">No major headlines in the latest archive.</p>
+          <div class="bar green"><i style="width:46%"></i></div>
+        </article>
+      </aside>
+    </main>
+
+    <footer class="page-footer">
+      <div>© 2026 ChinaVol.</div>
+      <div><a href="/briefings.html">Briefings</a> / <a href="/subscribe.html">Subscribe</a> / <a href="https://x.com/chinavol1" target="_blank" rel="noopener">X</a></div>
+    </footer>
+  </div>
+
+  <script>
+    const fallback = {
+      display_updated: "Updated Jun 27, 2026 17:29 CST",
+      briefing: { title: "China Market Pre-Open Briefing", url: "/briefings.html" },
+      news: { url: "/news/", status: "quiet", headline_count: 0, message: "No major headlines in the latest archive.", headlines: [] },
+      options: { label: "Jun 26 +3.1 sigma" }
+    };
+
+    function setText(name, value) {
+      document.querySelectorAll(`[data-field="${name}"]`).forEach((node) => { node.textContent = value; });
+    }
+
+    function setHref(name, value) {
+      document.querySelectorAll(`[data-link="${name}"]`).forEach((node) => { node.href = value; });
+    }
+
+    function hydrate(data) {
+      const firstNews = data.news?.headlines?.[0];
+      const storyTitle = firstNews?.title || data.briefing?.title || fallback.briefing.title;
+      const storySummary = firstNews?.summary || data.regime?.explanation || "Fed repricing, oil's sudden unwind, and tariff risk are compressing China-exposed valuations while headline volatility still looks tame.";
+      setText("display_updated", data.display_updated || fallback.display_updated);
+      setText("headline", storyTitle);
+      setText("dek", storySummary);
+      setText("why_one", data.regime?.explanation || "USD strength is becoming the transmission channel into China ADR risk.");
+      setText("why_two", "Oil, tariffs, and policy catalysts are clustered before realized volatility confirms.");
+      setText("why_three", `${data.signals?.watches_online ?? 35} watches are online while fired signals stay sparse.`);
+      setText("timeline_copy", data.data_note || "News flow, skew, and prediction-market repricing converge at the right edge.");
+      setText("shock_label", data.options?.label || fallback.options.label);
+      setText("news_status", data.news?.status || fallback.news.status);
+      setText("rail_one_copy", data.briefing?.title || fallback.briefing.title);
+      setText("option_label", data.options?.label || fallback.options.label);
+      setText("headline_count", `${data.news?.headline_count ?? fallback.news.headline_count} hits`);
+      setText("news_message", data.news?.message || firstNews?.summary || fallback.news.message);
+      setHref("briefing", data.briefing?.url || fallback.briefing.url);
+      setHref("news", data.news?.url || fallback.news.url);
+    }
+
+    fetch("/site-manifest.json", { cache: "no-store" })
+      .then((response) => response.ok ? response.json() : fallback)
+      .then(hydrate)
+      .catch(() => hydrate(fallback));
+  </script>
+</body>
+</html>

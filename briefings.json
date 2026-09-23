@@ -1,0 +1,657 @@
+{
+  "version": 1,
+  "updated_at": "2026-09-23T08:17:13+08:00",
+  "briefings": [
+    {
+      "date": "2026-09-23",
+      "lang": "en",
+      "title": "China Market Pre-Open Briefing — September 23, 2026",
+      "url": "/briefings/daily/nasdaq-grinds-to-record-as-trump-xi-dinner-looms-oil-slides-.html",
+      "section": "daily",
+      "source": "daily_briefing_publisher_en",
+      "published_at": "2026-09-23T00:00:00+08:00"
+    },
+    {
+      "date": "2026-09-22",
+      "lang": "en",
+      "title": "China Market Pre-Open Briefing — September 22, 2026",
+      "url": "/briefings/daily/us-tech-leads-risk-rally-into-monday-open-china-adrs-follow-.html",
+      "section": "daily",
+      "source": "daily_briefing_publisher_en",
+      "published_at": "2026-09-22T00:00:00+08:00"
+    },
+    {
+      "date": "2026-09-09",
+      "lang": "en",
+      "title": "China Market Pre-Open Briefing — September 09, 2026",
+      "url": "/briefings/daily/100-brent-and-a-hawkish-fed-reprice-china-risk.html",
+      "section": "daily",
+      "source": "daily_briefing_publisher_en",
+      "published_at": "2026-09-09T00:00:00+08:00"
+    },
+    {
+      "date": "2026-09-08",
+      "lang": "en",
+      "title": "China Market Pre-Open Briefing — September 08, 2026",
+      "url": "/briefings/daily/oil-shock-meets-a-selective-china-tech-bid.html",
+      "section": "daily",
+      "source": "daily_briefing_publisher_en",
+      "published_at": "2026-09-08T00:00:00+08:00"
+    },
+    {
+      "date": "2026-09-07",
+      "lang": "en",
+      "title": "China Market Pre-Open Briefing — September 07, 2026",
+      "url": "/briefings/daily/oil-shock-meets-hawkish-fed-risk-as-china-assets-rotate.html",
+      "section": "daily",
+      "source": "daily_briefing_publisher_en",
+      "published_at": "2026-09-07T00:00:00+08:00"
+    },
+    {
+      "date": "2026-09-04",
+      "lang": "en",
+      "title": "China Market Pre-Open Briefing — September 04, 2026",
+      "url": "/briefings/daily/oil-above-90-and-a-hawkish-fed-put-china-risk-assets-on-a-na.html",
+      "section": "daily",
+      "source": "daily_briefing_publisher_en",
+      "published_at": "2026-09-04T00:00:00+08:00"
+    },
+    {
+      "date": "2026-09-03",
+      "lang": "en",
+      "title": "China Market Pre-Open Briefing — September 03, 2026",
+      "url": "/briefings/daily/oil-at-95-and-a-hawkish-fed-put-china-risk-assets-on-the-def.html",
+      "section": "daily",
+      "source": "daily_briefing_publisher_en",
+      "published_at": "2026-09-03T00:00:00+08:00"
+    },
+    {
+      "date": "2026-09-02",
+      "lang": "en",
+      "title": "China Market Pre-Open Briefing — September 02, 2026",
+      "url": "/briefings/daily/summary-of-what-ran.html",
+      "section": "daily",
+      "source": "daily_briefing_publisher_en",
+      "published_at": "2026-09-02T00:00:00+08:00"
+    },
+    {
+      "date": "2026-09-01",
+      "lang": "en",
+      "title": "China Market Pre-Open Briefing — September 01, 2026",
+      "url": "/briefings/daily/oil-shock-and-hawkish-fed-pricing-test-china-risk-appetite.html",
+      "section": "daily",
+      "source": "daily_briefing_publisher_en",
+      "published_at": "2026-09-01T00:00:00+08:00"
+    },
+    {
+      "date": "2026-08-31",
+      "lang": "en",
+      "title": "China Market Pre-Open Briefing — August 31, 2026",
+      "url": "/briefings/daily/china-adrs-defy-a-soft-us-tape-as-tariff-relief-meets-a-high.html",
+      "section": "daily",
+      "source": "daily_briefing_publisher_en",
+      "published_at": "2026-08-31T00:00:00+08:00"
+    },
+    {
+      "date": "2026-08-28",
+      "lang": "en",
+      "title": "China Market Pre-Open Briefing — August 28, 2026",
+      "url": "/briefings/daily/us-session.html",
+      "section": "daily",
+      "source": "daily_briefing_publisher_en",
+      "published_at": "2026-08-28T00:00:00+08:00",
+      "meta": "Jun 01, 2026 · Daily Briefing"
+    },
+    {
+      "date": "2026-08-28",
+      "lang": "en",
+      "title": "China Market Pre-Open Briefing — August 28, 2026",
+      "url": "/briefings/daily/tech-risk-on-meets-a-hawkish-fed-and-a-firmer-oil-bill.html",
+      "section": "daily",
+      "source": "daily_briefing_publisher_en",
+      "published_at": "2026-08-28T00:00:00+08:00"
+    },
+    {
+      "date": "2026-08-27",
+      "lang": "en",
+      "title": "China Market Pre-Open Briefing — August 27, 2026",
+      "url": "/briefings/daily/higher-for-longer-fed-and-tariff-risk-cap-china-beta-as-the-.html",
+      "section": "daily",
+      "source": "daily_briefing_publisher_en",
+      "published_at": "2026-08-27T00:00:00+08:00"
+    },
+    {
+      "date": "2026-08-26",
+      "lang": "en",
+      "title": "China Market Pre-Open Briefing — August 26, 2026",
+      "url": "/briefings/daily/oil-collapse-eases-chinas-cost-burden-as-tariff-risk-returns.html",
+      "section": "daily",
+      "source": "daily_briefing_publisher_en",
+      "published_at": "2026-08-26T00:00:00+08:00"
+    },
+    {
+      "date": "2026-08-25",
+      "lang": "en",
+      "title": "China Market Pre-Open Briefing — August 25, 2026",
+      "url": "/briefings/daily/hawkish-fed-risk-and-fresh-tariff-pressure-put-china-growth-.html",
+      "section": "daily",
+      "source": "daily_briefing_publisher_en",
+      "published_at": "2026-08-25T00:00:00+08:00"
+    },
+    {
+      "date": "2026-08-24",
+      "lang": "en",
+      "title": "China Market Pre-Open Briefing — August 24, 2026",
+      "url": "/briefings/daily/china-stimulus-hopes-meet-a-hawkish-fed-and-renewed-tariff-r.html",
+      "section": "daily",
+      "source": "daily_briefing_publisher_en",
+      "published_at": "2026-08-24T00:00:00+08:00"
+    },
+    {
+      "date": "2026-08-21",
+      "lang": "en",
+      "title": "China Market Pre-Open Briefing — August 21, 2026",
+      "url": "/briefings/daily/treasury-yields-rebound-as-bessents-intervention-fails-oil-c.html",
+      "section": "daily",
+      "source": "daily_briefing_publisher_en",
+      "published_at": "2026-08-21T00:00:00+08:00"
+    },
+    {
+      "date": "2026-08-20",
+      "lang": "en",
+      "title": "China Market Pre-Open Briefing — August 20, 2026",
+      "url": "/briefings/daily/crypto-breakout-meets-a-hawkish-fed-and-china-growth-stress.html",
+      "section": "daily",
+      "source": "daily_briefing_publisher_en",
+      "published_at": "2026-08-20T00:00:00+08:00"
+    },
+    {
+      "date": "2026-08-19",
+      "lang": "en",
+      "title": "China Market Pre-Open Briefing — August 19, 2026",
+      "url": "/briefings/daily/tech-de-rates-as-higher-for-longer-fed-risk-meets-chinas-dem.html",
+      "section": "daily",
+      "source": "daily_briefing_publisher_en",
+      "published_at": "2026-08-19T00:00:00+08:00"
+    },
+    {
+      "date": "2026-08-18",
+      "lang": "en",
+      "title": "China Market Pre-Open Briefing — August 18, 2026",
+      "url": "/briefings/daily/oil-shock-tests-chinas-open-as-weak-credit-collides-with-a-s.html",
+      "section": "daily",
+      "source": "daily_briefing_publisher_en",
+      "published_at": "2026-08-18T00:00:00+08:00"
+    },
+    {
+      "date": "2026-08-17",
+      "lang": "en",
+      "title": "China Market Pre-Open Briefing — August 17, 2026",
+      "url": "/briefings/daily/low-volatility-masks-a-harder-china-trade-oil-tariffs-and-sl.html",
+      "section": "daily",
+      "source": "daily_briefing_publisher_en",
+      "published_at": "2026-08-17T00:00:00+08:00"
+    },
+    {
+      "date": "2026-08-14",
+      "lang": "en",
+      "title": "China Market Pre-Open Briefing — August 14, 2026",
+      "url": "/briefings/daily/us-tech-rallies-but-china-adrs-break-lower-as-tariff-risk-bi.html",
+      "section": "daily",
+      "source": "daily_briefing_publisher_en",
+      "published_at": "2026-08-14T00:00:00+08:00"
+    },
+    {
+      "date": "2026-08-13",
+      "lang": "en",
+      "title": "China Market Pre-Open Briefing — August 13, 2026",
+      "url": "/briefings/daily/china-open-softer-cpi-lifts-tech-but-oil-and-tariff-risk-cap.html",
+      "section": "daily",
+      "source": "daily_briefing_publisher_en",
+      "published_at": "2026-08-13T00:00:00+08:00"
+    },
+    {
+      "date": "2026-08-12",
+      "lang": "en",
+      "title": "China Market Pre-Open Briefing — August 12, 2026",
+      "url": "/briefings/daily/cpi-risk-meets-an-85-oil-test-as-china-assets-hold-their-gro.html",
+      "section": "daily",
+      "source": "daily_briefing_publisher_en",
+      "published_at": "2026-08-12T00:00:00+08:00"
+    },
+    {
+      "date": "2026-08-04",
+      "lang": "en",
+      "title": "China Market Pre-Open Briefing — August 04, 2026",
+      "url": "/briefings/daily/risk-rally-meets-an-oil-deflation-shock-as-china-policy-rota.html",
+      "section": "daily",
+      "source": "daily_briefing_publisher_en",
+      "published_at": "2026-08-04T00:00:00+08:00"
+    },
+    {
+      "date": "2026-08-03",
+      "lang": "en",
+      "title": "China Market Pre-Open Briefing — August 03, 2026",
+      "url": "/briefings/daily/china-adr-momentum-meets-weak-pmis-as-oil-and-fed-risk-pull-.html",
+      "section": "daily",
+      "source": "daily_briefing_publisher_en",
+      "published_at": "2026-08-03T00:00:00+08:00"
+    },
+    {
+      "date": "2026-07-31",
+      "lang": "en",
+      "title": "China Market Pre-Open Briefing — July 31, 2026",
+      "url": "/briefings/daily/tech-relief-meets-a-hawkish-fed-as-china-growth-stocks-face-.html",
+      "section": "daily",
+      "source": "daily_briefing_publisher_en",
+      "published_at": "2026-07-31T00:00:00+08:00"
+    },
+    {
+      "date": "2026-07-30",
+      "lang": "en",
+      "title": "China Market Pre-Open Briefing — July 30, 2026",
+      "url": "/briefings/daily/oil-shock-and-a-hawkish-fed-put-chinas-import-bill-ahead-of-.html",
+      "section": "daily",
+      "source": "daily_briefing_publisher_en",
+      "published_at": "2026-07-30T00:00:00+08:00"
+    },
+    {
+      "date": "2026-07-29",
+      "lang": "en",
+      "title": "China Market Pre-Open Briefing — July 29, 2026",
+      "url": "/briefings/daily/fed-hold-risk-and-china-growth-stress-set-a-defensive-a-shar.html",
+      "section": "daily",
+      "source": "daily_briefing_publisher_en",
+      "published_at": "2026-07-29T00:00:00+08:00"
+    },
+    {
+      "date": "2026-07-28",
+      "lang": "en",
+      "title": "China Market Pre-Open Briefing — July 28, 2026",
+      "url": "/briefings/daily/oil-slump-gives-china-a-cost-tailwind-as-the-fed-and-tariffs.html",
+      "section": "daily",
+      "source": "daily_briefing_publisher_en",
+      "published_at": "2026-07-28T00:00:00+08:00"
+    },
+    {
+      "date": "2026-07-27",
+      "lang": "en",
+      "title": "China Market Pre-Open Briefing — July 27, 2026",
+      "url": "/briefings/daily/oil-relief-meets-a-hawkish-fed-wall-at-the-china-open.html",
+      "section": "daily",
+      "source": "daily_briefing_publisher_en",
+      "published_at": "2026-07-27T00:00:00+08:00"
+    },
+    {
+      "date": "2026-07-24",
+      "lang": "en",
+      "title": "China Market Pre-Open Briefing — July 24, 2026",
+      "url": "/briefings/daily/oil-breaks-100-as-tariff-and-fed-risks-hit-china-tech.html",
+      "section": "daily",
+      "source": "daily_briefing_publisher_en",
+      "published_at": "2026-07-24T00:00:00+08:00"
+    },
+    {
+      "date": "2026-07-23",
+      "lang": "en",
+      "title": "China Market Pre-Open Briefing — July 23, 2026",
+      "url": "/briefings/daily/oil-shock-meets-the-tariff-deadline-as-fed-hold-caps-china-t.html",
+      "section": "daily",
+      "source": "daily_briefing_publisher_en",
+      "published_at": "2026-07-23T00:00:00+08:00"
+    },
+    {
+      "date": "2026-07-21",
+      "lang": "en",
+      "title": "China Market Pre-Open Briefing — July 21, 2026",
+      "url": "/briefings/daily/china-adrs-rally-as-oil-and-policy-risk-set-the-mainland-ope.html",
+      "section": "daily",
+      "source": "daily_briefing_publisher_en",
+      "published_at": "2026-07-21T00:00:00+08:00"
+    },
+    {
+      "date": "2026-07-20",
+      "lang": "en",
+      "title": "China Market Pre-Open Briefing — July 20, 2026",
+      "url": "/briefings/daily/oil-shock-and-hawkish-fed-pricing-put-china-growth-trades-on.html",
+      "section": "daily",
+      "source": "daily_briefing_publisher_en",
+      "published_at": "2026-07-20T00:00:00+08:00"
+    },
+    {
+      "date": "2026-07-17",
+      "lang": "en",
+      "title": "China Market Pre-Open Briefing — July 17, 2026",
+      "url": "/briefings/daily/tech-de-rating-overrides-inflation-relief-as-chinas-two-spee.html",
+      "section": "daily",
+      "source": "daily_briefing_publisher_en",
+      "published_at": "2026-07-17T00:00:00+08:00"
+    },
+    {
+      "date": "2026-07-16",
+      "lang": "en",
+      "title": "China Market Pre-Open Briefing — July 16, 2026",
+      "url": "/briefings/daily/china-adrs-rally-on-trade-truce-hopes-as-oil-and-domestic-gr.html",
+      "section": "daily",
+      "source": "daily_briefing_publisher_en",
+      "published_at": "2026-07-16T00:00:00+08:00"
+    },
+    {
+      "date": "2026-07-15",
+      "lang": "en",
+      "title": "China Market Pre-Open Briefing — July 15, 2026",
+      "url": "/briefings/daily/soft-cpi-fuels-tech-rally-but-85-brent-keeps-chinas-inflatio.html",
+      "section": "daily",
+      "source": "daily_briefing_publisher_en",
+      "published_at": "2026-07-15T00:00:00+08:00"
+    },
+    {
+      "date": "2026-07-14",
+      "lang": "en",
+      "title": "China Market Pre-Open Briefing — July 14, 2026",
+      "url": "/briefings/daily/oil-shock-and-hawkish-fed-pricing-put-china-tech-on-the-defe.html",
+      "section": "daily",
+      "source": "daily_briefing_publisher_en",
+      "published_at": "2026-07-14T00:00:00+08:00"
+    },
+    {
+      "date": "2026-07-13",
+      "lang": "en",
+      "title": "China Market Pre-Open Briefing — July 13, 2026",
+      "url": "/briefings/daily/oil-shock-and-hawkish-fed-pricing-put-chinas-import-bill-bac.html",
+      "section": "daily",
+      "source": "daily_briefing_publisher_en",
+      "published_at": "2026-07-13T00:00:00+08:00"
+    },
+    {
+      "date": "2026-07-10",
+      "lang": "en",
+      "title": "China Market Pre-Open Briefing — July 10, 2026",
+      "url": "/briefings/daily/china-tech-momentum-meets-tariff-and-fed-risk-as-oil-falls-v.html",
+      "section": "daily",
+      "source": "daily_briefing_publisher_en",
+      "published_at": "2026-07-10T00:00:00+08:00"
+    },
+    {
+      "date": "2026-07-09",
+      "lang": "en",
+      "title": "China Market Pre-Open Briefing — July 09, 2026",
+      "url": "/briefings/daily/oil-shock-meets-a-no-cut-fed-china-beta-needs-discipline-des.html",
+      "section": "daily",
+      "source": "daily_briefing_publisher_en",
+      "published_at": "2026-07-09T00:00:00+08:00"
+    },
+    {
+      "date": "2026-07-08",
+      "lang": "en",
+      "title": "China Market Pre-Open Briefing — July 08, 2026",
+      "url": "/briefings/daily/oil-shock-sticky-fed-pricing-and-weak-china-breadth-leave-a-.html",
+      "section": "daily",
+      "source": "daily_briefing_publisher_en",
+      "published_at": "2026-07-08T00:00:00+08:00"
+    },
+    {
+      "date": "2026-07-07",
+      "lang": "en",
+      "title": "China Market Pre-Open Briefing — July 07, 2026",
+      "url": "/briefings/daily/risk-bid-improves-but-fed-inertia-and-taiwan-strait-energy-r.html",
+      "section": "daily",
+      "source": "daily_briefing_publisher_en",
+      "published_at": "2026-07-07T00:00:00+08:00"
+    },
+    {
+      "date": "2026-07-06",
+      "lang": "en",
+      "title": "China Market Pre-Open Briefing — July 06, 2026",
+      "url": "/briefings/daily/higher-for-longer-fed-pricing-and-taiwan-energy-risk-keep-ch.html",
+      "section": "daily",
+      "source": "daily_briefing_publisher_en",
+      "published_at": "2026-07-06T00:00:00+08:00"
+    },
+    {
+      "date": "2026-07-03",
+      "lang": "en",
+      "title": "China Market Pre-Open Briefing — July 03, 2026",
+      "url": "/briefings/daily/china-pre-open-tech-adr-weakness-meets-calm-vol-firm-crypto-.html",
+      "section": "daily",
+      "source": "daily_briefing_publisher_en",
+      "published_at": "2026-07-03T00:00:00+08:00"
+    },
+    {
+      "date": "2026-07-02",
+      "lang": "en",
+      "title": "China Market Pre-Open Briefing — July 02, 2026",
+      "url": "/briefings/daily/china-tech-holds-up-as-oil-slides-fed-cut-bets-fade-and-taiw.html",
+      "section": "daily",
+      "source": "daily_briefing_publisher_en",
+      "published_at": "2026-07-02T00:00:00+08:00"
+    },
+    {
+      "date": "2026-07-01",
+      "lang": "en",
+      "title": "China Market Pre-Open Briefing — July 01, 2026",
+      "url": "/briefings/daily/china-pre-open-tech-led-us-risk-bid-meets-sticky-inflation-a.html",
+      "section": "daily",
+      "source": "daily_briefing_publisher_en",
+      "published_at": "2026-07-01T00:00:00+08:00"
+    },
+    {
+      "date": "2026-06-30",
+      "lang": "en",
+      "title": "China Market Pre-Open Briefing — June 30, 2026",
+      "url": "/briefings/daily/higher-for-longer-fed-and-firm-oil-leave-china-risk-bid-sele.html",
+      "section": "daily",
+      "source": "daily_briefing_publisher_en",
+      "published_at": "2026-06-30T00:00:00+08:00"
+    },
+    {
+      "date": "2026-06-29",
+      "lang": "en",
+      "title": "China Market Pre-Open Briefing — June 29, 2026",
+      "url": "/briefings/daily/china-open-faces-hawkish-fed-drag-as-oil-firms-and-domestic-.html",
+      "section": "daily",
+      "source": "daily_briefing_publisher_en",
+      "published_at": "2026-06-29T00:00:00+08:00"
+    },
+    {
+      "date": "2026-06-26",
+      "lang": "en",
+      "title": "China Market Pre-Open Briefing — June 26, 2026",
+      "url": "/briefings/daily/china-adrs-crack-as-fed-oil-and-tariff-risk-tighten-the-tape.html",
+      "section": "daily",
+      "source": "daily_briefing_publisher_en",
+      "published_at": "2026-06-26T00:00:00+08:00",
+      "meta": "Jun 26, 2026 · Daily Briefing"
+    },
+    {
+      "date": "2026-06-25",
+      "lang": "en",
+      "title": "China Market Pre-Open Briefing — June 25, 2026",
+      "url": "/briefings/daily/fed-hawkish-pivot-oil-crash-and-trumps-new-tariff-wall-compr.html",
+      "section": "daily",
+      "source": "legacy-briefings-html",
+      "published_at": "2026-06-25T00:00:00+08:00",
+      "meta": "Jun 25, 2026 · Daily Briefing"
+    },
+    {
+      "date": "2026-06-24",
+      "lang": "en",
+      "title": "China Market Pre-Open Briefing — June 24, 2026",
+      "url": "/briefings/daily/1-us-session.html",
+      "section": "daily",
+      "source": "legacy-briefings-html",
+      "published_at": "2026-06-24T00:00:00+08:00",
+      "meta": "Jun 24, 2026 · Daily Briefing"
+    },
+    {
+      "date": "2026-06-23",
+      "lang": "en",
+      "title": "China Market Pre-Open Briefing — June 23, 2026",
+      "url": "/briefings/daily/china-retaliates-against-pentagon-blacklist-rare-earth-expor.html",
+      "section": "daily",
+      "source": "legacy-briefings-html",
+      "published_at": "2026-06-23T00:00:00+08:00",
+      "meta": "Jun 23, 2026 · Daily Briefing"
+    },
+    {
+      "date": "2026-06-22",
+      "lang": "en",
+      "title": "China Market Pre-Open Briefing — June 22, 2026",
+      "url": "/briefings/daily/china-open-tests-the-ai-bid-against-a-hawkish-fed-and-a-stil.html",
+      "section": "daily",
+      "source": "legacy-briefings-html",
+      "published_at": "2026-06-22T00:00:00+08:00",
+      "meta": "Jun 22, 2026 · Daily Briefing"
+    },
+    {
+      "date": "2026-06-19",
+      "lang": "en",
+      "title": "China Market Pre-Open Briefing — June 19, 2026",
+      "url": "/briefings/daily/oil-war-premium-deflates-as-the-warsh-fed-keeps-china-durati.html",
+      "section": "daily",
+      "source": "legacy-briefings-html",
+      "published_at": "2026-06-19T00:00:00+08:00",
+      "meta": "Jun 19, 2026 · Daily Briefing"
+    },
+    {
+      "date": "2026-06-18",
+      "lang": "en",
+      "title": "China Market Pre-Open Briefing — June 18, 2026",
+      "url": "/briefings/daily/fed-hawks-keep-pressure-on-adrs-hormuz-relief-caps-chinas-oi.html",
+      "section": "daily",
+      "source": "legacy-briefings-html",
+      "published_at": "2026-06-18T00:00:00+08:00",
+      "meta": "Jun 18, 2026 · Daily Briefing"
+    },
+    {
+      "date": "2026-06-17",
+      "lang": "en",
+      "title": "China Market Pre-Open Briefing — June 17, 2026",
+      "url": "/briefings/daily/chinavol-daily-briefing-june-17-2026.html",
+      "section": "daily",
+      "source": "legacy-briefings-html",
+      "published_at": "2026-06-17T00:00:00+08:00",
+      "meta": "Jun 17, 2026 · Daily Briefing"
+    },
+    {
+      "date": "2026-06-12",
+      "lang": "en",
+      "title": "China Market Pre-Open Briefing — June 12, 2026",
+      "url": "/briefings/daily/tech-rally-defies-hot-cpi-oil-crashes-on-iran-peace-hopes-ch.html",
+      "section": "daily",
+      "source": "legacy-briefings-html",
+      "published_at": "2026-06-12T00:00:00+08:00",
+      "meta": "Jun 12, 2026 · Daily Briefing"
+    },
+    {
+      "date": "2026-06-09",
+      "lang": "en",
+      "title": "China Market Pre-Open Briefing — June 09, 2026",
+      "url": "/briefings/daily/a-shares-gut-check-on-rate-hike-fears-hormuz-oil-premium-hol.html",
+      "section": "daily",
+      "source": "legacy-briefings-html",
+      "published_at": "2026-06-09T00:00:00+08:00",
+      "meta": "Jun 09, 2026 · Daily Briefing"
+    },
+    {
+      "date": "2026-06-08",
+      "lang": "en",
+      "title": "China Market Pre-Open Briefing — June 08, 2026",
+      "url": "/briefings/daily/headline-vix-spikes-to-215-as-us-tech-liquidates-crypto-deco.html",
+      "section": "daily",
+      "source": "legacy-briefings-html",
+      "published_at": "2026-06-08T00:00:00+08:00",
+      "meta": "Jun 08, 2026 · Daily Briefing"
+    },
+    {
+      "date": "2026-06-05",
+      "lang": "en",
+      "title": "China Market Pre-Open Briefing — June 05, 2026",
+      "url": "/briefings/daily/headline-oil-drops-3-as-opec-signals-output-hike-despite-hor.html",
+      "section": "daily",
+      "source": "legacy-briefings-html",
+      "published_at": "2026-06-05T00:00:00+08:00",
+      "meta": "Jun 05, 2026 · Daily Briefing"
+    },
+    {
+      "date": "2026-06-04",
+      "lang": "en",
+      "title": "China Market Pre-Open Briefing — June 04, 2026",
+      "url": "/briefings/daily/sticky-cpi-nvidia-chip-ban-and-oil-at-95-china-traders-brace.html",
+      "section": "daily",
+      "source": "legacy-briefings-html",
+      "published_at": "2026-06-04T00:00:00+08:00",
+      "meta": "Jun 04, 2026 · Daily Briefing"
+    },
+    {
+      "date": "2026-06-03",
+      "lang": "en",
+      "title": "China Market Pre-Open Briefing — June 03, 2026",
+      "url": "/briefings/daily/oil-surge-china-adr-rally-divergent-signals-for-a-share-open.html",
+      "section": "daily",
+      "source": "legacy-briefings-html",
+      "published_at": "2026-06-03T00:00:00+08:00",
+      "meta": "Jun 03, 2026 · Daily Briefing"
+    },
+    {
+      "date": "2026-06-02",
+      "lang": "en",
+      "title": "China Market Pre-Open Briefing — June 02, 2026",
+      "url": "/briefings/daily/trump-xi-summit-lifts-hong-kong-086-as-us-inflation-shock-6-.html",
+      "section": "daily",
+      "source": "legacy-briefings-html",
+      "published_at": "2026-06-02T00:00:00+08:00",
+      "meta": "Jun 02, 2026 · Daily Briefing"
+    },
+    {
+      "date": "2026-05-29",
+      "lang": "en",
+      "title": "China Market Pre-Open Briefing — May 29, 2026",
+      "url": "/briefings/daily/pdd-bleeds-4-as-crypto-liquidation-wave-hits-1b-iran-peace-7.html",
+      "section": "daily",
+      "source": "legacy-briefings-html",
+      "published_at": "2026-05-29T00:00:00+08:00",
+      "meta": "May 29, 2026 · Daily Briefing"
+    },
+    {
+      "date": "2026-05-28",
+      "lang": "en",
+      "title": "China Market Pre-Open Briefing — May 28, 2026",
+      "url": "/briefings/daily/thursday-may-28-2026-china-pre-market.html",
+      "section": "daily",
+      "source": "legacy-briefings-html",
+      "published_at": "2026-05-28T00:00:00+08:00",
+      "meta": "May 28, 2026 · Daily Briefing"
+    },
+    {
+      "date": "2026-05-28",
+      "lang": "en",
+      "title": "China Market Pre-Open Briefing — May 28, 2026",
+      "url": "/briefings/daily/pdd-crashes-10-as-a50-flatlines-oil-nears-90-with-iran-peace.html",
+      "section": "daily",
+      "source": "legacy-briefings-html",
+      "published_at": "2026-05-28T00:00:00+08:00",
+      "meta": "May 28, 2026 · Daily Briefing"
+    },
+    {
+      "date": "2026-05-28",
+      "lang": "zh",
+      "title": "中国盘前速递 — 2026年5月28日（周四）",
+      "url": "/briefings/daily/2026528.html",
+      "section": "daily",
+      "source": "legacy-briefings-html",
+      "published_at": "2026-05-28T00:00:00+08:00",
+      "meta": "May 28, 2026 · 每日简报"
+    },
+    {
+      "date": "2026-05-28",
+      "lang": "en",
+      "title": "Gold screams $4,400 while S&P prints 750 — the market is lying to itself about the tariff \"peace\"",
+      "url": "/briefings/daily/2026-05-28-gold-screams-market-lying.html",
+      "section": "daily",
+      "source": "legacy-briefings-html",
+      "published_at": "2026-05-28T00:00:00+08:00",
+      "meta": "May 28, 2026 · Market Intelligence"
+    }
+  ]
+}

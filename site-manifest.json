@@ -1,0 +1,77 @@
+{
+  "updated_at": "2026-09-23T08:17:13+08:00",
+  "display_updated": "Updated Sep 23, 2026 08:17 CST",
+  "data_quality": "mixed",
+  "data_note": "Briefing archive is generated from content/briefings.json. News archive is generated from local HTML. Signal and volatility widgets are design placeholders until exporters are wired.",
+  "hero": {
+    "headline": "China risk is quiet. The tape is not.",
+    "dek": "Daily China market intelligence from live signals, options skew, prediction markets, and Chinese financial news.",
+    "primary_cta": "Read today's briefing",
+    "primary_url": "/briefings/daily/nasdaq-grinds-to-record-as-trump-xi-dinner-looms-oil-slides-.html",
+    "secondary_cta": "Open volatility lab",
+    "secondary_url": "/volatility.html"
+  },
+  "briefing": {
+    "date": "2026-09-23",
+    "title": "China Market Pre-Open Briefing — September 23, 2026",
+    "url": "/briefings/daily/nasdaq-grinds-to-record-as-trump-xi-dinner-looms-oil-slides-.html",
+    "meta": "Daily Briefing",
+    "source": "daily_briefing_publisher_en"
+  },
+  "news": {
+    "date": "2026-09-22",
+    "url": "/news/2026-09-22.html",
+    "headline_count": 0,
+    "headlines": [],
+    "status": "quiet",
+    "message": "No major headlines for this period."
+  },
+  "regime": {
+    "label": "Watch",
+    "score": 62,
+    "trend": "+8 pts",
+    "source": "design-placeholder",
+    "explanation": "Volatility is subdued, but catalysts are clustered around Fed policy, oil, tariffs, and China ADR breadth."
+  },
+  "options": {
+    "title": "Option skew spike",
+    "label": "Jun 26 +3.1 sigma",
+    "z_score": 3.1,
+    "source": "design-placeholder",
+    "series": [
+      0.4,
+      0.6,
+      0.2,
+      0.9,
+      1.1,
+      0.8,
+      1.4,
+      1.0,
+      1.7,
+      1.2,
+      2.0,
+      3.1
+    ]
+  },
+  "signals": {
+    "fired_now": 0,
+    "watches_online": 35,
+    "last_fired": "2h 15m ago",
+    "source": "design-placeholder"
+  },
+  "sections": {
+    "today": {
+      "title": "Command Center",
+      "text": "Risk regime, fired signals, skew spike, news count."
+    },
+    "newsroom": {
+      "title": "Market Narrative",
+      "headline": "China news wire is quiet",
+      "url": "/news/2026-09-22.html"
+    },
+    "volatility": {
+      "title": "Chart Lab",
+      "text": "Options z-score, prediction shifts, signal heatmap."
+    }
+  }
+}

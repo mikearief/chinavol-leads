@@ -3,96 +3,147 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Get ChinaVol Briefings — Free Daily Digest</title>
-  <meta name="description" content="Free pre-market digest delivered before Asia opens. No spam. Unsubscribe anytime.">
-  <meta property="og:title" content="Get ChinaVol Briefings — Free Daily Digest">
-  <meta property="og:description" content="Free pre-market digest delivered before Asia opens. No spam. Unsubscribe anytime.">
+  <title>Subscribe to ChinaVol</title>
+  <meta name="description" content="Get the ChinaVol daily briefing before Asia opens.">
+  <meta property="og:title" content="Subscribe to ChinaVol">
+  <meta property="og:description" content="Get the ChinaVol daily briefing before Asia opens.">
   <meta property="og:url" content="https://chinavol.com/subscribe.html">
   <meta property="og:type" content="website">
   <meta property="og:image" content="https://chinavol.com/assets/og-default.png">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:site" content="@chinavol1">
-  <meta name="twitter:title" content="Get ChinaVol Briefings — Free Daily Digest">
-  <meta name="twitter:description" content="Free pre-market digest delivered before Asia opens. No spam. Unsubscribe anytime.">
-  <meta name="twitter:image" content="https://chinavol.com/assets/og-default.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/chinavol-suite.css">
   <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-      background: #0f172a; color: #e2e8f0; min-height: 100vh;
-      display: flex; flex-direction: column; align-items: center; padding: 3rem 1rem;
+    .subscribe-hero {
+      min-height: calc(100vh - 74px);
+      display: grid;
+      grid-template-columns: minmax(0, 0.9fr) minmax(360px, 0.72fr);
+      gap: 44px;
+      align-items: center;
+      padding: 52px 0;
     }
-    .container { max-width: 480px; width: 100%; text-align: center; }
-    .logo { font-size: 1.5rem; font-weight: 800; margin-bottom: .5rem;
-      background: linear-gradient(135deg, #f59e0b, #ef4444, #8b5cf6);
-      -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-    h1 { font-size: 1.7rem; font-weight: 800; margin-bottom: .75rem; line-height: 1.2; }
-    p { color: #94a3b8; font-size: 1rem; margin-bottom: 2rem; line-height: 1.6; }
-    form { background: #1e293b; border: 1px solid #334155; border-radius: 12px; padding: 1.5rem; text-align: left; }
-    label { display: block; font-size: .82rem; font-weight: 600; color: #cbd5e1; margin-bottom: .35rem; }
+
+    .subscribe-card {
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      background: rgba(16,18,20,0.94);
+      padding: 22px;
+      box-shadow: 0 24px 80px rgba(0,0,0,0.34);
+    }
+
+    form { display: grid; gap: 14px; }
+    label {
+      display: block;
+      color: #cbd5e1;
+      font-size: 0.84rem;
+      font-weight: 800;
+      margin-bottom: 7px;
+    }
+
     input[type="email"], input[type="text"] {
-      width: 100%; padding: .6rem .75rem; border-radius: 8px; border: 1px solid #334155;
-      background: #0f172a; color: #f8fafc; font-size: .95rem; margin-bottom: 1rem;
+      width: 100%;
+      min-height: 44px;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      background: #090b0d;
+      color: var(--text);
+      padding: 0 12px;
+      font: 600 0.95rem Inter, system-ui, sans-serif;
     }
-    input:focus { outline: none; border-color: #f59e0b; }
-    .checkbox { display: flex; align-items: flex-start; gap: .5rem; font-size: .82rem; color: #94a3b8; margin-bottom: 1.25rem; }
-    .checkbox input { margin-top: .15rem; }
-    button {
-      width: 100%; padding: .8rem; border: none; border-radius: 8px;
-      background: linear-gradient(135deg, #f59e0b, #ef4444); color: #fff;
-      font-weight: 700; font-size: 1rem; cursor: pointer; transition: transform .15s;
+
+    input:focus { outline: 2px solid rgba(245,158,11,0.36); outline-offset: 2px; }
+    .checkbox { display: grid; grid-template-columns: 18px 1fr; gap: 10px; align-items: start; color: #aeb6c2; line-height: 1.45; font-size: 0.84rem; }
+    .checkbox input { margin-top: 2px; }
+    button.btn { width: 100%; cursor: pointer; }
+    .benefits { display: grid; gap: 14px; margin-top: 30px; }
+    .benefit {
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      background: var(--surface);
+      padding: 16px;
     }
-    button:hover { transform: translateY(-2px); }
-    .footer { margin-top: 2rem; font-size: .78rem; color: #64748b; }
-    .footer a { color: #94a3b8; }
-    .nav { margin-bottom: 2rem; }
-    .nav a { color: #94a3b8; text-decoration: none; font-size: .88rem; margin: 0 .6rem; }
-    .nav a:hover { color: #f59e0b; }
+    .benefit strong { display: block; margin-top: 10px; font-size: 1.05rem; }
+    .benefit p { color: #aeb6c2; line-height: 1.48; margin: 8px 0 0; }
+
+    @media (max-width: 960px) {
+      .subscribe-hero { grid-template-columns: 1fr; min-height: auto; }
+    }
   </style>
 </head>
 <body>
-  <div class="nav">
-    <a href="/">← Home</a>
-    <a href="/briefings.html">Briefings</a>
-    <a href="/methodology.html">Methodology</a>
-  </div>
+  <div class="shell">
+    <header class="site-header">
+      <a class="brand" href="/" aria-label="ChinaVol home">
+        <img src="/assets/logo_icon_raw.png" alt="">
+        <span>ChinaVol</span>
+      </a>
+      <nav class="primary-nav" aria-label="Primary">
+        <a href="/">Today</a>
+        <a href="/newsroom.html">Newsroom</a>
+        <a href="/volatility.html">Volatility</a>
+        <a href="/briefings.html">Briefings</a>
+        <a class="active" href="/subscribe.html">Subscribe</a>
+      </nav>
+      <div class="stamp">Free daily digest</div>
+    </header>
 
-  <div class="container">
-    <div class="logo"><img src="/assets/logo_icon_raw.png" alt="" style="width:28px;height:28px;border-radius:6px;vertical-align:middle;margin-right:6px;">ChinaVol</div>
-    <h1>Get the daily briefing</h1>
-    <p>Free pre-market digest, delivered to your inbox before Asia opens. No spam. Unsubscribe anytime.</p>
+    <main class="subscribe-hero">
+      <section>
+        <div class="label kicker">Subscribe / ChinaVol briefing</div>
+        <h1>Get the daily China market briefing.</h1>
+        <p class="lead">A concise pre-market read on China risk, ADR pressure, options skew, policy headlines, and the tape before Asia opens.</p>
+        <div class="benefits" aria-label="Subscription benefits">
+          <article class="benefit">
+            <div class="label">Daily</div>
+            <strong>Pre-open narrative</strong>
+            <p>One briefing that ties macro, policy, news, and price action together.</p>
+          </article>
+          <article class="benefit">
+            <div class="label">Signal aware</div>
+            <strong>Built from the same static feed</strong>
+            <p>Briefings, newsroom context, and dashboard metrics all read from the site manifest.</p>
+          </article>
+        </div>
+      </section>
 
-    <!-- Replace action with your form backend (Buttondown, ConvertKit, Beehiiv, etc.) -->
-    <form action="https://buttondown.com/api/emails/embed-subscribe/chinavol" method="post" target="_blank">
-      <label for="email">Email address</label>
-      <input type="email" name="email" id="email" placeholder="you@example.com" required>
+      <section class="subscribe-card" aria-label="Subscribe form">
+        <form action="https://buttondown.com/api/emails/embed-subscribe/chinavol" method="post" target="_blank">
+          <div>
+            <label for="email">Email address</label>
+            <input type="email" name="email" id="email" placeholder="you@example.com" required>
+          </div>
 
-      <label for="name">Name (optional)</label>
-      <input type="text" name="metadata__name" id="name" placeholder="First name">
+          <div>
+            <label for="name">Name optional</label>
+            <input type="text" name="metadata__name" id="name" placeholder="First name">
+          </div>
 
-      <div class="checkbox">
-        <input type="checkbox" id="consent" required>
-        <label for="consent" style="font-weight:400; margin:0; font-size:.82rem; color:#94a3b8;">
-          I agree to receive ChinaVol briefings and market alerts. Privacy policy applies.
-        </label>
-      </div>
+          <div class="checkbox">
+            <input type="checkbox" id="consent" required>
+            <label for="consent">I agree to receive ChinaVol briefings and market alerts.</label>
+          </div>
 
-      <button type="submit">Subscribe for free →</button>
-    </form>
+          <button class="btn btn-primary" type="submit">Subscribe for free</button>
+        </form>
+        <p class="copy">No spam. Unsubscribe anytime. Real-time alerts still live on <a class="route-link" href="https://x.com/chinavol1" target="_blank" rel="noopener">X</a>.</p>
+      </section>
+    </main>
 
-    <div class="footer">
-      Want real-time alerts? → <a href="https://x.com/chinavol1" target="_blank">Follow @chinavol1 on 𝕏</a>
-      <br><br>
-      ChinaVol is fully free. Premium coming soon.
-    </div>
+    <footer class="page-footer">
+      <div>© 2026 ChinaVol.</div>
+      <div><a href="/briefings.html">Briefings</a> / <a href="/newsroom.html">Newsroom</a> / <a href="mailto:contact@chinavol.com">Contact</a></div>
+    </footer>
   </div>
 
   <script>
-    const form = document.querySelector('form');
-    form.addEventListener('submit', function(e) {
-      if (!document.getElementById('consent').checked) {
-        e.preventDefault();
-        alert('Please agree to receive briefings before subscribing.');
+    const form = document.querySelector("form");
+    form.addEventListener("submit", (event) => {
+      if (!document.getElementById("consent").checked) {
+        event.preventDefault();
+        alert("Please agree to receive briefings before subscribing.");
       }
     });
   </script>
